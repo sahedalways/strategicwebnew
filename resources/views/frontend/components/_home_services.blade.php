@@ -2,7 +2,7 @@
      <div class="row mx-0 custom-mb">
          <div class="col-md-6 d-md-none d-block mb-4" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/webdesing.jpg" alt="">
+             <img class="w-100" src="{{ asset('images/website-design.png') }}" alt="">
          </div>
          <div class="col-md-6 pe-5">
              <h3 class="content-heading">Web Design</h3>
@@ -25,14 +25,14 @@
          </div>
          <div class="col-md-6 d-md-block d-none" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/webdesign-2.jpg" alt="">
+             <img class="w-100" src="{{ asset('images/webdesign-2.jpg') }}" alt="">
          </div>
      </div>
 
      <div class="row mx-0 custom-mb">
          <div class="col-md-6 mb-md-0 mb-4" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/graphic2.png" alt="">
+             <img class="w-100" src="{{ asset('images/graphic2.png') }}" alt="">
          </div>
          <div class="col-md-6 ps-5">
              <h3 class="content-heading">Graphic Design</h3>
@@ -58,7 +58,7 @@
      <div class="row mx-0 custom-mb">
          <div class="col-md-6 d-md-none d-block mb-4" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/marketing2.jpg" alt="">
+             <img class="w-100" src="{{ asset('images/marketing2.jpg') }}" alt="">
          </div>
          <div class="col-md-6 pe-5">
              <h3 class="content-heading">Digital Marketing</h3>
@@ -81,14 +81,14 @@
          </div>
          <div class="col-md-6 d-md-block d-none" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/marketing2.jpg" alt="">
+             <img class="w-100" src="{{ asset('images/marketing2.jpg') }}" alt="">
          </div>
      </div>
 
      <div class="row mx-0 custom-mb">
          <div class="col-md-6 mb-md-0 mb-4" data-aos="fade-up" data-aos-easing="linear"
              data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-             <img class="w-100" src="./img/ecommerce-solution.png" alt="">
+             <img class="w-100" src="{{ asset('images/ecommerce-solution.png') }}" alt="">
          </div>
          <div class="col-md-6 ps-5">
              <h3 class="content-heading">Ecommerce Solutions</h3>

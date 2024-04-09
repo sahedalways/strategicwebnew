@@ -4,7 +4,8 @@
               <!-- Logo -->
               <div class="">
                   <a class="navbar-brand" href="#">
-                      <img src="./img/main-logo.png" alt="Logo" class="d-inline-block align-top col-md-3 col-10">
+                      <img src="{{ asset('images/main-logo.png') }}" alt="Logo"
+                          class="d-inline-block align-top col-md-3 col-10">
                   </a>
               </div>
               <!-- Toggler -->
@@ -39,3 +40,6 @@
           </div>
       </div>
   </nav>
+
+  {{-- contact form below --}}
+  @include('frontend.components._contact_form_modal')

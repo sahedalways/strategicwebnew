@@ -13,7 +13,7 @@
 
                <div class="col-md-5 text-end d-md-block d-none" data-aos="fade-up" data-aos-easing="linear"
                    data-aos-anchor-placement="top-bottom">
-                   <img class="col-lg-6 col-12" src="./img/image.png" alt="">
+                   <img class="col-lg-6 col-12" src="{{ asset('images/image.png') }}" alt="">
                </div>
            </div>
 

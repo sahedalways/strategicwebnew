@@ -37,3 +37,46 @@
           <a class="next" href="#">&#10095;</a>
       </div>
   </div>
+
+
+  <div class="container py-5 pt-0">
+      <div class="owl-carousel">
+          <div class="item">
+              <img class="image-1"
+                  src="https://png.pngtree.com/thumb_back/fh260/background/20230524/pngtree-three-gold-and-pink-tin-cans-of-the-same-size-set-image_2603886.jpg"
+                  alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+
+          <div class="item">
+              <img class="image-1"
+                  src="https://png.pngtree.com/thumb_back/fh260/background/20230521/pngtree-set-of-green-and-orange-trees-on-the-ceiling-image_2668141.jpg"
+                  alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+
+          <div class="item">
+              <img class="image-1" src="{{ asset('images/5.jpg') }}" alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+          <div class="item">
+              <img class="image-1"
+                  src="https://static.vecteezy.com/system/resources/thumbnails/024/173/495/small_2x/a-stunning-image-of-a-minimalist-yellow-showcasing-the-magical-elegance-found-in-simplicity-ai-generative-photo.jpg"
+                  alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+
+          <div class="item">
+              <img class="image-1"
+                  src="https://png.pngtree.com/thumb_back/fh260/background/20230521/pngtree-set-of-green-and-orange-trees-on-the-ceiling-image_2668141.jpg"
+                  alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+
+          <div class="item">
+              <img class="image-1" src="{{ asset('images/5.jpg') }}" alt="Image 1">
+              <img class="image-2" src="{{ asset('images/3.jpg') }}" alt="Image 1">
+          </div>
+      </div>
+
+  </div>

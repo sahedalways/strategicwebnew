@@ -39,7 +39,7 @@
                         <div class="invalid-feedback">
                             Please select a service type.
                         </div>
-                </div> -->
+                </div>
 
                 <div class="position-relative mb-3">
                     <label for="text" class="form-label" onclick="toggleOptionList()">Choose a

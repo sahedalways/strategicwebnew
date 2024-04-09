@@ -55,3 +55,6 @@
     </div>
 </div>
 <!-- custom package end -->
+
+{{-- package form below --}}
+@include('frontend.components._package_form_modal')
