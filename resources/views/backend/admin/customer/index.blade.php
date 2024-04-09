@@ -85,6 +85,8 @@
 
                                         <td>{{ date('d-M-Y', strtotime($customer->created_at)) }}</td>
 
+                                        <td>{{ $customer->user_type }}</td>
+
                                         @if ($customer->status == '1')
                                             <td class="text-center"><a href="{{ route('customer_status', $customer->id) }}"
                                                     class="badge badge-primary shadow-none">Active</a></td>

@@ -146,88 +146,87 @@
                 </div>
 
                 {{-- customer --}}
-                @if (hasAccessForManager('View Members'))
-                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
 
-                        <div class="widget widget-table-two">
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
 
-                            <div class="widget-heading">
-                                <h5 class="" style="color: #422b02">Total Members {{ $custo->count() }}</h5>
-                                <h5 class="text-center">Registered Members</h5>
-                            </div>
+                    <div class="widget widget-table-two">
 
-                            <div class="widget-section">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
+                        <div class="widget-heading">
+                            <h5 class="" style="color: #422b02">Total Members {{ $custo->count() }}</h5>
+                            <h5 class="text-center">Registered Members</h5>
+                        </div>
+
+                        <div class="widget-section">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="th-section">Name</div>
+                                            </th>
+
+                                            <th>
+                                                <div class="th-section">E-mail</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-section">Created at</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-section">Action</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @forelse($customers as $customer)
                                             <tr>
-                                                <th>
-                                                    <div class="th-section">Name</div>
-                                                </th>
+                                                <td>
+                                                    <div class="td-section">{{ $customer->name }}
+                                                    </div>
+                                                </td>
 
-                                                <th>
-                                                    <div class="th-section">E-mail</div>
-                                                </th>
-                                                <th>
-                                                    <div class="th-section">Created at</div>
-                                                </th>
-                                                <th>
-                                                    <div class="th-section">Action</div>
-                                                </th>
+                                                <td>
+                                                    <div class="td-section"><span
+                                                            class="">{{ $customer->email }}</span>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="td-section">
+                                                        <span
+                                                            class="badge badge-success">{{ $customer->created_at->diffForHumans() }}</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="td-section">
+
+                                                        <a href="{{ route('customer.show', $customer->id) }}">
+                                                            View
+                                                        </a>
+                                                        <a href="{{ route('customer.edit', $customer->id) }}"
+                                                            class="bs-tooltip" data-toggle="tooltip" data-placement="top"
+                                                            title="" data-original-title="Edit">
+
+                                                        </a>
+
+                                                    </div>
+                                                </td>
                                             </tr>
-                                        </thead>
+                                        @empty
+                                            <tr>
+                                                <td>
+                                                    <span class="text-center">No Data Found</span>
+                                                </td>
+                                            </tr>
+                                        @endforelse
 
-                                        <tbody>
-                                            @forelse($customers as $customer)
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-section">{{ $customer->name }}
-                                                        </div>
-                                                    </td>
-
-                                                    <td>
-                                                        <div class="td-section"><span
-                                                                class="">{{ $customer->email }}</span>
-                                                        </div>
-                                                    </td>
-
-                                                    <td>
-                                                        <div class="td-section">
-                                                            <span
-                                                                class="badge badge-success">{{ $customer->created_at->diffForHumans() }}</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-section">
-
-                                                            <a href="{{ route('customer.show', $customer->id) }}">
-                                                                View
-                                                            </a>
-                                                            <a href="{{ route('customer.edit', $customer->id) }}"
-                                                                class="bs-tooltip" data-toggle="tooltip"
-                                                                data-placement="top" title=""
-                                                                data-original-title="Edit">
-
-                                                            </a>
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @empty
-                                                <tr>
-                                                    <td>
-                                                        <span class="text-center">No Data Found</span>
-                                                    </td>
-                                                </tr>
-                                            @endforelse
-
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                @endif
+                </div>
+
 
 
                 {{-- admin --}}
@@ -293,5 +292,6 @@
                 @endif
             </div>
         @endif
+
     </div>
 @endsection

@@ -1,6 +1,8 @@
 <?php
 
 // frontend controllers are below
+
+use App\Http\Controllers\Admin\Customer\CustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\RegisterTabController;
@@ -33,6 +35,8 @@ Route::get('/', function (Request $request) {
         } elseif ($userType == 'user') {
             return view('frontend.home');
         }
+    } else {
+        return view('frontend.home');
     }
 })->name('home');
 
@@ -45,9 +49,8 @@ Route::middleware('is_user')->group(
         // only admin and accountant can access below routes
         Route::middleware('is_admin_manager')->group(
             function () {
-
                 // customers
-                Route::resource('customer', MemberController::class);
+                Route::resource('customer', CustomerController::class);
             }
         );
     }
