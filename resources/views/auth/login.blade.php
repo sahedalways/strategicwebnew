@@ -132,29 +132,17 @@
 
                                     <div class="form-group">
                                         <div class="form-group px-4 py-2">
-                                            <label class="form-label primary-text-color" for="f_name">First Name</label>
-                                            <input id="f_name" type="text" class="form-control" name="f_name"
-                                                value="" required autocomplete="f_name" autofocus
-                                                placeholder="Type first name">
-                                            @error('f_name')
+                                            <label class="form-label primary-text-color" for="name">Name</label>
+                                            <input id="name" type="text" class="form-control" name="name"
+                                                value="" required autocomplete="name" autofocus
+                                                placeholder="Type your name">
+                                            @error('name')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div id="f_name_error" class="error-message text-center"></div>
+                                        <div id="name_error" class="error-message text-center"></div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="form-group px-4 py-2">
-                                            <label class="form-label primary-text-color" for="l_name">Last Name</label>
-                                            <input id="l_name" type="text" class="form-control" name="l_name"
-                                                value="" required autocomplete="l_name" autofocus
-                                                placeholder="Type last name">
-                                            @error('l_name')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                        <div id="l_name_error" class="error-message text-center"></div>
-                                    </div>
 
                                     <div class="form-group">
                                         <div class="form-group px-4 py-2">

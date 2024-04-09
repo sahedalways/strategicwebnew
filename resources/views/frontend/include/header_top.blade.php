@@ -34,6 +34,29 @@
                       <a class="nav-link text-white menu-hover-effect {{ request()->is('press') ? 'active' : '' }}"
                           href="{{ route('press') }}">Press</a>
                   </li>
+
+                  @if (auth()->user())
+                      <li class="nav-item ms-lg-4 ms-0">
+                          <a class="nav-link text-white menu-hover-effect" href="{{ route('logout') }}"
+                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                              href="#">Logout</a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                              @csrf
+                          </form>
+                      </li>
+                  @else
+                      <li class="nav-item ms-lg-4 ms-0">
+                          <a class="nav-link text-white menu-hover-effect" href="{{ route('login') }}">Login</a>
+                      </li>
+                  @endif
+
+                  @if (auth()->guest())
+                      <li class="nav-item ms-lg-4 ms-0">
+                          <a class="nav-link text-white menu-hover-effect"
+                              href="{{ route('register.tab') }}">Register</a>
+                      </li>
+                  @endif
                   <li class="nav-item ms-lg-4 ms-0 mt-lg-0 mt-3">
                       <a style="white-space: nowrap;" data-bs-toggle="modal" data-bs-target="#contactModal"
                           class="nav-link fw-semibold menu-button" href="#">lets

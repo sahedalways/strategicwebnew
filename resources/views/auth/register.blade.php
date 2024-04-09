@@ -25,9 +25,9 @@
 
                             <div class="form-group border-top">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="username">First Name</label>
-                                    <input id="f_name" type="text" class="form-control" name="f_name" value=""
-                                        required autocomplete="name" autofocus placeholder="Type Here">
+                                    <label class="form-label primary-text-color" for="name">Name</label>
+                                    <input id="name" type="text" class="form-control" name="name" value=""
+                                        required autocomplete="name" autofocus placeholder="Type your name">
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -35,17 +35,7 @@
                                 <div id="name_error" class="error-message text-center"></div>
                             </div>
 
-                            <div class="form-group">
-                                <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="username">Last Name</label>
-                                    <input id="l_name" type="text" class="form-control" name="l_name" value=""
-                                        required autocomplete="name" autofocus placeholder="Type Here">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div id="name_error" class="error-message text-center"></div>
-                            </div>
+
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
@@ -60,15 +50,15 @@
                             </div>
 
                             <!-- <div class="form-group">
-                                                        <div class="form-group px-4 py-2">
-                                                            <label class="form-label" for="Phone-No">Phone No</label>
-                                                            <input class="form-control" name="phone_number" value="127672322" type="number" id="phone_number" placeholder="Type Here">
-                                                            @error('phone_number')
+                                                                    <div class="form-group px-4 py-2">
+                                                                        <label class="form-label" for="Phone-No">Phone No</label>
+                                                                        <input class="form-control" name="phone_number" value="127672322" type="number" id="phone_number" placeholder="Type Here">
+                                                                        @error('phone_number')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-                                                        </div>
-                                                        <div id="phone_number_error" class="error-message text-center"></div>
-                                                    </div> -->
+                                                                    </div>
+                                                                    <div id="phone_number_error" class="error-message text-center"></div>
+                                                                </div> -->
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
@@ -109,8 +99,8 @@
 
 
                             <div class="text-center my-4">
-                                <button type="button" class="btn custom-button-style w-75 py-2"
-                                    id="register-btn">Register now</button>
+                                <button type="button" class="btn custom-button-style w-75 py-2" id="register-btn">Register
+                                    now</button>
                             </div>
 
                             <div class="text-center my-4">

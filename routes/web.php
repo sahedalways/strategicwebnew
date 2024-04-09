@@ -3,7 +3,7 @@
 // frontend controllers are below
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
-
+use App\Http\Controllers\RegisterTabController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +32,7 @@ Route::get('/about-us', [PagesController::class, 'aboutUs'])->name('about');
 Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact');
 Route::get('/services', [PagesController::class, 'services'])->name('service');
 Route::get('/press', [PagesController::class, 'press'])->name('press');
+
+
+// register tab api
+Route::get('/register-process', [RegisterTabController::class, 'getRegisterTab'])->name('register.tab');
