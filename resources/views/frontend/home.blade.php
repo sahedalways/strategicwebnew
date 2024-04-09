@@ -21,6 +21,6 @@
     @include('frontend.components._home_featured_plans')
 
 
-    <script src="{{ asset('/user_assets') }}/js/home/home.js"></script>
+
 
 @endsection

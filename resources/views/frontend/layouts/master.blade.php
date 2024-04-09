@@ -65,6 +65,9 @@
     @yield('content')
 
 
+    {{-- contact form below --}}
+    @include('frontend.components._contact_form_modal')
+
     @include('frontend.include.footer')
 
 
@@ -93,6 +96,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="{{ asset('/user_assets') }}/js/home/home.js"></script>
     @yield('script')
 </body>cript>
 
