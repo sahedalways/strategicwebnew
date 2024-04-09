@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterTabController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 
 //Clear route cache:
@@ -18,14 +19,39 @@ Route::get('/clear', function () {
     return 'Routes cache has been cleared';
 });
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
 
 Auth::routes();
 
-// navigate to the home page
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+
+// navigate to the home or dashboard page
+Route::get('/', function (Request $request) {
+    if (Auth::check()) {
+        $userType = Auth::user()->user_type;
+
+        if ($userType == 'admin' || $userType == 'manager') {
+            return redirect()->route('dashboard');
+        } elseif ($userType == 'user') {
+            return view('frontend.home');
+        }
+    }
+})->name('home');
+
+
+// only authenticated users and admin can access the below routes
+Route::middleware('is_user')->group(
+    function () {
+        Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+
+        // only admin and accountant can access below routes
+        Route::middleware('is_admin_manager')->group(
+            function () {
+
+                // customers
+                Route::resource('customer', MemberController::class);
+            }
+        );
+    }
+);
 
 // pages api here
 Route::get('/about-us', [PagesController::class, 'aboutUs'])->name('about');

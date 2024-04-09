@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-    {{ auth()->user()->f_name }}'s Dashboard
+    {{ auth()->user()->name }}'s Dashboard
 @endsection
 
 
@@ -30,7 +30,7 @@
                             <h5 class="text-dark">
                                 Todays Book
                                 {{-- <strong style="font-size: 20px;color: #9100ff">৳$7</strong> --}}
-                                <strong style="font-size: 20px;color: #9100ff">{{ $todayBookedCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">76</strong>
                             </h5>
                         </div>
                     </div>
@@ -43,8 +43,7 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Monthly Book
-                                {{-- <strong style="font-size: 20px;color: #9100ff">$99</strong> --}}
-                                <strong style="font-size: 20px;color: #9100ff">{{ $monthlyBookedCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">99</strong>
                             </h5>
                         </div>
                     </div>
@@ -55,8 +54,8 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Total Book
-                                {{-- <strong style="font-size: 20px;color: #9100ff">$9991</strong> --}}
-                                <strong style="font-size: 20px;color: #9100ff">{{ $bookedInfoCount }}</strong>
+
+                                <strong style="font-size: 20px;color: #9100ff">77</strong>
                             </h5>
                         </div>
                     </div>
@@ -67,8 +66,7 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Cancelled Book
-                                {{-- <strong style="font-size: 20px;color: #9100ff">$9991</strong> --}}
-                                <strong style="font-size: 20px;color: #9100ff">{{ $cancelledBookedInfoCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">43</strong>
                             </h5>
                         </div>
                     </div>
@@ -79,9 +77,7 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Pending Cancellation
-                                {{-- <strong style="font-size: 20px;color: #9100ff">$9991</strong> --}}
-                                <strong
-                                    style="font-size: 20px;color: #9100ff">{{ $pendingCancelledBookedInfoTotalCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">56</strong>
                             </h5>
                         </div>
                     </div>
@@ -92,9 +88,7 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Net Book
-                                {{-- <strong style="font-size: 20px;color: #9100ff">$9991</strong> --}}
-                                <strong
-                                    style="font-size: 20px;color: #9100ff">{{ $bookedInfoCount - $cancelledBookedInfoCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">67</strong>
                             </h5>
                         </div>
                     </div>
@@ -111,16 +105,9 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Monthly Income
-                                @if ($monthlyIncome)
-                                    <strong
-                                        style="font-size: 20px;color: #9100ff">${{ number_format($monthlyIncome, 2) }}</strong>
-                                @else
-                                    <strong style="font-size: 20px;color: #9100ff">$0.00</strong>
-                                @endif
+                                <strong style="font-size: 20px;color: #9100ff">$76</strong>
 
                             </h5>
-                            {{-- <a href="{{ route('admin.reports.complete') }}" class="btn btn-success ml-1"
-                                title="Show List">View</a> --}}
                         </div>
                     </div>
                 </div>
@@ -131,18 +118,10 @@
                         <div class="widget-heading">
                             <h5 class="text-dark">
                                 Total Income
-                                @if ($totalIncome)
-                                    <strong style="font-size: 20px;color: #9100ff">${{ number_format($totalIncome, 2) }}
-                                    </strong>
-                                @else
-                                    <strong style="font-size: 20px;color: #9100ff">$0.00
-                                    </strong>
-                                @endif
 
+                                <strong style="font-size: 20px;color: #9100ff">$98
+                                </strong>
                             </h5>
-                            {{-- <a href="{{ route('admin.withdraw-requests.complete') }}" class="btn btn-warning"
-                                title="Show List">View</a> --}}
-
                         </div>
                     </div>
                 </div>
@@ -155,9 +134,8 @@
                         <div class="widget-heading">
                             <h5>
                                 Total Games
-                                <strong style="font-size: 20px;color: #9100ff">{{ $gamesCount }}</strong>
+                                <strong style="font-size: 20px;color: #9100ff">34</strong>
                             </h5>
-                            {{-- <a href="{{ route('game.index') }}" class="btn btn-sm btn-info ml-1" title="Show List">View</a> --}}
                         </div>
                     </div>
                 </div>
@@ -203,8 +181,7 @@
                                             @forelse($customers as $customer)
                                                 <tr>
                                                     <td>
-                                                        <div class="td-section">{{ $customer->f_name }}
-                                                            {{ $customer->l_name }}
+                                                        <div class="td-section">{{ $customer->name }}
                                                         </div>
                                                     </td>
 
@@ -284,7 +261,7 @@
                                             @forelse($adminsLatest as $ad)
                                                 <tr>
                                                     <td>
-                                                        <div class="td-section">{{ $ad->f_name }} {{ $ad->l_name }}
+                                                        <div class="td-section">{{ $ad->name }}
                                                         </div>
                                                     </td>
                                                     <td>
@@ -314,14 +291,7 @@
                         </div>
                     </div>
                 @endif
-
-
             </div>
         @endif
-
-
     </div>
-
-
-
 @endsection
