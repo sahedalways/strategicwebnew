@@ -11,7 +11,7 @@
 
 
     {{-- services here --}}
-    @include('frontend.components._home_services')
+    @include('frontend.components._services')
 
     {{-- featured works here --}}
     @include('frontend.components._home_featured_work')
