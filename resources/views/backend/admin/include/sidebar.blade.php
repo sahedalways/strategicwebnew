@@ -45,9 +45,47 @@
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                             </svg>
-                            <span>Members</span>
+                            <span>Customers</span>
                         </div>
                     </a>
+                </li>
+
+                {{-- articles menu item here --}}
+                <li class="menu">
+                    <a style="text-decoration: none;" href="#article" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 3H3v18h18V3zm-2 14H5M5 7h14M10 11h4" />
+                            </svg>
+
+
+
+                            <span>Articles</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="{{ $route == 'article.index' || $route == 'article.edit' || $route == 'article.create' ? 'submenu list-unstyled collapse show' : 'collapse submenu list-unstyled' }}"
+                        id="article" data-parent="#accordionExample">
+
+                        <li class="{{ $route == 'article.index' ? 'active' : '' }}">
+                            <a style="text-decoration: none;" href="{{ route('article.index') }}">Article List</a>
+                        </li>
+
+                        <li class="{{ $route == 'article.create' ? 'active' : '' }}">
+                            <a style="text-decoration: none;" href="{{ route('article.create') }}">Create Article</a>
+                        </li>
+
+                    </ul>
+
                 </li>
 
         </nav>

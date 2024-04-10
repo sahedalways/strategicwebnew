@@ -2,6 +2,7 @@
 
 // frontend controllers are below
 
+use App\Http\Controllers\Admin\Article\ArticleController;
 use App\Http\Controllers\Admin\Customer\CustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
@@ -53,6 +54,9 @@ Route::middleware('is_user')->group(
                 Route::resource('customer', CustomerController::class);
                 Route::get('customer/status/{id}', [CustomerController::class, 'status'])->name('customer_status');
                 Route::post('customer/delete/{id}', [CustomerController::class, 'destroy'])->name('customer_destroy');
+
+                // articles route here
+                Route::resource('article', ArticleController::class);
             }
         );
     }
