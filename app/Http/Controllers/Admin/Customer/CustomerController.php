@@ -20,67 +20,56 @@ class CustomerController extends Controller
                 ->orWhere('name', 'like', '%' . $q . '%')
                 ->orWhere('phone_number', 'like', '%' . $q . '%');
         }
-        $customers = $customers->where('type', 'user')->paginate(15);
+        $customers = $customers->where('user_type', 'user')->paginate(15);
 
         return view('backend.admin.customer.index', compact('customers'));
     }
 
     public function show($id)
     {
-        $customer = User::with('orders')->findOrFail($id);
-
-        return view('BackEnd.customer.show', compact('customer'));
+        return view('backend.admin.customer.show');
     }
 
     public function create()
     {
-        return view('BackEnd.customer.add');
+        return view('backend.admin.customer.add');
     }
 
     public function store(Request $request)
     {
         try {
             $request->validate([
-                'fname' => 'required|string|max:255',
-                'lname' => 'required|string|max:255',
+                'name' => 'required|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6',
             ]);
 
-            $fname = $request->input('fname');
-            $lname = $request->input('lname');
+            $name = $request->input('name');
             $email = $request->input('email');
             $password = $request->input('password');
             $cpassword = $request->input('cpassword');
             $mailing = $request->input('mailing');
-            $type = $request->input('type');
+            $userType = $request->input('user_type');
 
             if ($password != $cpassword) {
                 return back()->with('sms', 'Password not matched');
             }
             $customer = new User();
-            if ($fname) {
-                $customer->fname = $fname;
+            if ($name) {
+                $customer->name = $name;
             }
-            if ($lname) {
-                $customer->lname = $lname;
-            }
+
             $customer->email = $email;
             $customer->password = Hash::make($password);
-            if ($type) {
-                if ($type == 'su_admin') {
-                    if (auth()->user()->type != "su_admin") {
-                        return back()->with('sms', 'You cannot assign super user');
-                    }
+            if ($userType) {
+
+                if (auth()->user()->userType != "admin") {
+                    return back()->with('sms', 'You cannot assign super user');
                 }
-                $customer->type = $type;
+
+                $customer->user_type = $userType;
             }
-            // add into mailing list
-            if ($mailing) {
-                $mailingList = new MailingList();
-                $mailingList->user_id = $$customer->id;
-                $mailingList->save();
-            }
+
             $customer->save();
 
             return back()->with('sms', 'New user created');
@@ -106,23 +95,22 @@ class CustomerController extends Controller
 
     public function edit($id)
     {
-        $customer = User::with('orders')->findOrFail($id);
 
-        return view('BackEnd.customer.edit', compact('customer'));
+        return view('backend.admin.customer.edit');
     }
 
     public function update(Request $request, $id)
     {
-        $type = $request->input('type');
+        $type = $request->input('user_type');
 
         $customer = User::findOrFail($id);
         if ($type) {
-            if ($type == 'su_admin') {
-                if (auth()->user()->type != "su_admin") {
-                    return back()->with('sms', 'You cannot assign super user');
-                }
+
+            if (auth()->user()->user_type != "admin") {
+                return back()->with('sms', 'You cannot assign super user');
             }
-            $customer->type = $type;
+
+            $customer->user_type = $type;
         }
         $customer->save();
 
@@ -132,8 +120,8 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         $customer = User::findOrFail($id);
-        if ($customer->type == 'su_admin') {
-            if (auth()->user()->type != "su_admin") {
+        if ($customer->user_type == 'admin') {
+            if (auth()->user()->user_type != "admin") {
                 return back()->with('sms', 'You cannot delete a super user');
             }
         }

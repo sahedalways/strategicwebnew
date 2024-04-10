@@ -51,6 +51,8 @@ Route::middleware('is_user')->group(
             function () {
                 // customers
                 Route::resource('customer', CustomerController::class);
+                Route::get('customer/status/{id}', [CustomerController::class, 'status'])->name('customer_status');
+                Route::post('customer/delete/{id}', [CustomerController::class, 'destroy'])->name('customer_destroy');
             }
         );
     }
