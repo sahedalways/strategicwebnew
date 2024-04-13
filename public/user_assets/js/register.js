@@ -116,8 +116,7 @@ $(document).ready(function () {
             $("#confirm_password_error").text() ||
             $("#phone_number_error").text() ||
             $("#register_email_error").text() ||
-            $("#f_name_error").text() ||
-            $("#l_name_error").text() ||
+            $("#name_error").text() ||
             $("#register_password_error").text()
         ) {
             return false;
