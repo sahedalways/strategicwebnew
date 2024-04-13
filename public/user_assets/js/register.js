@@ -93,14 +93,16 @@ $(document).ready(function () {
                 .text("Password is required.")
                 .css("color", "red");
             $("#registerPassword").css("border-color", "red");
-        } else if (!validatePassword(password)) {
-            $("#register_password_error")
-                .text(
-                    "Password must be 8-20 characters, include at least 1 special character, and 1 number."
-                )
-                .css("color", "red");
-            $("#registerPassword").css("border-color", "red");
         }
+
+        // else if (!validatePassword(password)) {
+        //     $("#register_password_error")
+        //         .text(
+        //             "Password must be 8-20 characters, include at least 1 special character, and 1 number."
+        //         )
+        //         .css("color", "red");
+        //     $("#registerPassword").css("border-color", "red");
+        // }
 
         if (password != password_confirmation) {
             $("#confirm_password_error")
@@ -239,14 +241,15 @@ $(document).ready(function () {
         var password = $(this).val();
         var passwordError = $("#register_password_error");
 
-        if (!validatePassword(password)) {
-            passwordError
-                .text(
-                    "Password must be 8-20 characters, include at least 1 special character, and 1 number."
-                )
-                .css("color", "red");
-            $(this).css("border-color", "red");
-        } else if (!password) {
+        // if (!validatePassword(password)) {
+        //     passwordError
+        //         .text(
+        //             "Password must be 8-20 characters, include at least 1 special character, and 1 number."
+        //         )
+        //         .css("color", "red");
+        //     $(this).css("border-color", "red");
+        // } else if (!password) {
+        if (!password) {
             passwordError.text("Password is required.").css("color", "red");
             $(this).css("border-color", "red");
         } else {
