@@ -21,8 +21,22 @@ class DatabaseSeeder extends Seeder
             'gender' => '1',
             'phone_number' => '017366739332',
             'status' => '1',
-            'email' => 'admin@gmail.com',
+            'email' => 'admin@strategicwebdesigner.com',
             'user_type' => 'admin',
+            'email_verified_at' => now(),
+            'password' => Hash::make('4'),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+
+        User::factory()->create([
+            'name' => 'Mr Admin',
+            'gender' => '1',
+            'phone_number' => '017366739332',
+            'status' => '1',
+            'email' => 'support@strategicwebdesigner.com',
+            'user_type' => 'manager',
             'email_verified_at' => now(),
             'password' => Hash::make('4'),
             'created_at' => now(),

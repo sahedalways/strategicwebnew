@@ -18,7 +18,7 @@ class ContactUsController extends Controller
 
 
         Mail::send('frontend.mail.contact_us', ['data' => $validatedData], function ($message) use ($validatedData) {
-            $message->to("ssahed65@gmail.com")
+            $message->to("admin@strategicwebdesigner.com")
                 ->subject('Contact Us Message');
         });
 
