@@ -59,13 +59,12 @@
             <h2>Contact Us Message</h2>
         </div>
         <div class="content">
-            <p><strong>Name:</strong> {{ $data['first_name'] }} {{ $data['last_name'] }}</p>
             <p><strong>Email:</strong> {{ $data['email'] }}</p>
-            <p><strong>Phone Number:</strong> {{ $data['phone_number'] }}</p>
+            <p><strong>Service:</strong> {{ $data['service'] }}</p>
             <p><strong>Message:</strong> {{ $data['message'] }}</p>
         </div>
         <div class="footer">
-            <p>Sportify Book Ltd.</p>
+            <p>Strategic Web.</p>
         </div>
     </div>
 </body>

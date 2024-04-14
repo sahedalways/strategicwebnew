@@ -164,7 +164,7 @@ jqOld(document).ready(function () {
                 processData: false,
                 contentType: false,
                 headers: {
-                    "X-CSRF-TOKEN": csrfToken, // Include CSRF token in the headers
+                    "X-CSRF-TOKEN": csrfToken,
                 },
                 success: function (response) {
                     var gamePrice = response.gamePrice;

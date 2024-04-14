@@ -1,16 +1,19 @@
 <?php
 
-// frontend controllers are below
-
-use App\Http\Controllers\Admin\Article\ArticleController;
-use App\Http\Controllers\Admin\Customer\CustomerController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\RegisterTabController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+
+// frontend controllers here
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\RegisterTabController;
+
+// backend controllers are below
+use App\Http\Controllers\Admin\Article\ArticleController;
+use App\Http\Controllers\Admin\Customer\CustomerController;
 
 
 //Clear route cache:
@@ -68,6 +71,8 @@ Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact'
 Route::get('/services', [PagesController::class, 'services'])->name('service');
 Route::get('/press', [PagesController::class, 'press'])->name('press');
 
+//contact us api
+Route::post('/submit-contact-message', [ContactUsController::class, 'submitContactMessage'])->name('submit-contact-message');
 
 // register tab api
 Route::get('/register-process', [RegisterTabController::class, 'getRegisterTab'])->name('register.tab');

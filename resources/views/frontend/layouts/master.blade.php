@@ -98,6 +98,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="{{ asset('/user_assets') }}/js/home/home.js"></script>
+
+    {{-- contact us javascript --}}
+    <script src="{{ asset('/user_assets') }}/js/contact-us/contact-us.js"></script>
     @yield('script')
 </body>cript>
 
