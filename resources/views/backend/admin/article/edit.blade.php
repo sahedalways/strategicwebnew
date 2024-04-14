@@ -99,6 +99,29 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Display Priority<sup style="color:red;">(*)</sup></label>
+                                <select id="display_priority"
+                                    class="form-control @error('display_priority') is-invalid @enderror"
+                                    name="display_priority">
+                                    <option value="first"
+                                        {{ $articleDetail->display_priority == 'first' ? 'selected' : '' }}>First</option>
+                                    <option value="middle"
+                                        {{ $articleDetail->display_priority == 'middle' ? 'selected' : '' }}>Middle
+                                    </option>
+                                    <option value="last"
+                                        {{ $articleDetail->display_priority == 'last' ? 'selected' : '' }}>Last</option>
+                                </select>
+                                @error('display_priority')
+                                    <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <div class="form-group mb-3">

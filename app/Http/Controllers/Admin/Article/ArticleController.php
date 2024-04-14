@@ -39,10 +39,13 @@ class ArticleController extends Controller
       $validatedData = $request->validate([
         'title' => 'required|unique:articles|max:255',
         'description' => 'required',
+        'display_priority' => 'required',
         'author' => 'required|max:255',
         'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
       ]);
 
+      $validatedData['created_at'] = now();
+      $validatedData['updated_at'] = now();
 
       // Process the image
       if ($request->hasFile('image')) {
@@ -83,6 +86,7 @@ class ArticleController extends Controller
     $validatedData = $request->validate([
       'title' => 'required|max:255',
       'description' => 'required',
+      'display_priority' => 'required',
       'author' => 'required|max:255',
       'image' => 'image|mimes:jpeg,png,jpg,gif|max:5048',
     ]);

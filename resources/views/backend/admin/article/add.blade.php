@@ -94,6 +94,25 @@
                     </div>
 
 
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Display Priority<sup style="color:red;">(*)</sup></label>
+                                <select id="display_priority" class="form-control @error('priority') is-invalid @enderror"
+                                    name="display_priority">
+                                    <option value="first">First</option>
+                                    <option value="middle" selected>Middle</option>
+                                    <option value="last">Last</option>
+                                </select>
+                                @error('display_priority')
+                                    <div class="alert alert-danger mt-1">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                     <div class="form-group mb-3">
                         <button id="submit" type="submit" class="btn btn-primary mt-3">Save</button>

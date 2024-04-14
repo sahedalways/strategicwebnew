@@ -82,6 +82,7 @@
                                 <th>Description</th>
                                 <th>Image</th>
                                 <th>Author</th>
+                                <th>Display Priority</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -104,6 +105,22 @@
                                     <td class="text-center">
                                         {{ $item->author }}
                                     </td>
+
+                                    @if ($item->display_priority == 'first')
+                                        <td class="text-center">
+                                            First
+                                        </td>
+                                    @elseif($item->display_priority == 'middle')
+                                        <td class="text-center">
+                                            Middle
+                                        </td>
+                                    @else
+                                        <td class="text-center">
+                                            Last
+                                        </td>
+                                    @endif
+
+
                                     <td class="text-center">
                                         <ul class="table-controls">
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -26,6 +27,9 @@ class PagesController extends Controller
 
     public function press()
     {
-        return view('frontend.press');
+        // Retrieve all articles from the database
+        $articles = Article::all();
+
+        return view('frontend.press', ['articles' => $articles]);
     }
 }

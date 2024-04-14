@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('image')->nullable();
             $table->string('author');
+            $table->enum('display_priority', ['first', 'middle', 'last'])->default('middle');
             $table->timestamps();
         });
     }
