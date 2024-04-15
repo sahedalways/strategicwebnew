@@ -42,6 +42,11 @@
                 @endif
             </div> --}}
             <div class="col-md-6">
+                @if (session('message'))
+                    <div class="alert alert-warning">
+                        {{ session('message') }}
+                    </div>
+                @endif
                 <div class="card">
                     <div class="card-body p-4">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">

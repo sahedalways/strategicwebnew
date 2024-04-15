@@ -14,7 +14,7 @@ use App\Http\Controllers\RegisterTabController;
 // backend controllers are below
 use App\Http\Controllers\Admin\Article\ArticleController;
 use App\Http\Controllers\Admin\Customer\CustomerController;
-
+use App\Http\Controllers\PaymentController;
 
 //Clear route cache:
 Route::get('/clear', function () {
@@ -76,3 +76,10 @@ Route::post('/submit-contact-message', [ContactUsController::class, 'submitConta
 
 // register tab api
 Route::get('/register-process', [RegisterTabController::class, 'getRegisterTab'])->name('register.tab');
+
+
+// checkout api's here
+// Route::get('/checkout', [BookingController::class, 'checkout'])->name('checkout');
+Route::post('/stripe', [PaymentController::class, 'paymentWithStripe'])->name('stripe');
+Route::get('/success', [PaymentController::class, 'success'])->name('success');
+Route::get('/cancel', [PaymentController::class, 'cancel'])->name('cancel');

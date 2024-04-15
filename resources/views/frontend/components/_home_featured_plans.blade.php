@@ -13,7 +13,13 @@
                              <h5 style="color: gray;" class="card-title mb-3">$499.99</h5>
                          </div>
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name" value="Web design">
+                                 <input type="hidden" name="total_price" value="99.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
@@ -28,9 +34,14 @@
                              <h6 class="card-title fw-semibold">Digital marketing</h6>
                              <h5 style="color: gray;" class="card-title mb-3">$699.99</h5>
                              <div class="row justify-content-center">
+                                 <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                     @csrf
+                                     @method('POST')
+                                     <input type="hidden" name="service_name" value="Digital marketing">
+                                     <input type="hidden" name="total_price" value="699.99">
+                                     <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                                 </form>
                              </div>
-
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
                          </div>
                      </div>
                  </div>
@@ -45,9 +56,16 @@
                              <h6 class="card-title fw-semibold">E-commerce</h6>
                              <h5 style="color: gray;" class="card-title mb-3">$799.99</h5>
                              <div class="row justify-content-center">
+                                 <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                     @csrf
+                                     @method('POST')
+                                     <input type="hidden" name="service_name" value="E commerce">
+                                     <input type="hidden" name="total_price" value="799.99">
+                                     <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                                 </form>
                              </div>
 
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+
                          </div>
                      </div>
                  </div>
@@ -66,7 +84,13 @@
 
 
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name" value="Graphic design(Up to 2 design)">
+                                 <input type="hidden" name="total_price" value="15.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
@@ -88,7 +112,15 @@
 
 
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name"
+                                     value="Web design,Digital marketing(4 month) and Graphic
+                                     design(4 month)">
+                                 <input type="hidden" name="total_price" value="1499.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
@@ -104,13 +136,20 @@
                                  <h6 class="card-title fw-semibold">E-commerce + Digital marketing (4 month) +
                                      graphic
                                      design</h6>
-                                 <h5 style="color: gray;" class="card-title mt-3">$1999 .99</h5>
+                                 <h5 style="color: gray;" class="card-title mt-3">$1999.99</h5>
                              </div>
                          </div>
 
 
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name"
+                                     value="E commerce, Digital marketing(4 month) and Graphic design">
+                                 <input type="hidden" name="total_price" value="1999.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
@@ -124,13 +163,19 @@
                              <h4 style="color: #F15F50;" class="card-title my-4">Premium Combo Service</h4>
                              <div class="mb-3">
                                  <h6 class="card-title fw-semibold">Digital marketing + E-commerce</h6>
-                                 <h5 style="color: gray;" class="card-title mt-3">$1999 .99</h5>
+                                 <h5 style="color: gray;" class="card-title mt-3">$1999.99</h5>
                              </div>
                          </div>
 
 
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name" value="Digital marketing and E-commerce">
+                                 <input type="hidden" name="total_price" value="1999.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
@@ -152,7 +197,14 @@
                          </div>
 
                          <div class="row justify-content-center">
-                             <button class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name"
+                                     value="Graphic design(up to 20 design per month)">
+                                 <input type="hidden" name="total_price" value="89.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
                          </div>
                      </div>
                  </div>
