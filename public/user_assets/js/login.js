@@ -34,24 +34,16 @@ $(document).ready(function () {
         var password = $("#password").val();
 
         // Reset error messages and border colors
-        $(
-            "#email_error",
+        $("#email_error", "#password_error").text("");
+        $("#email", "#password").css("border-color", "");
 
-            "#password_error"
-        ).text("");
-        $(
-            "#email",
-
-            "#password"
-        ).css("border-color", "");
-
-        if (!isValidEmail(email)) {
+        if (!email) {
+            $("#email_error").text("Email is required.").css("color", "red");
+            $("#email").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
             $("#email_error")
                 .text("Please enter a valid email address.")
                 .css("color", "red");
-            $("#email").css("border-color", "red");
-        } else if (!email) {
-            $("#email_error").text("Email is required.").css("color", "red");
             $("#email").css("border-color", "red");
         }
 
@@ -59,7 +51,7 @@ $(document).ready(function () {
             $("#password_error")
                 .text("Password is required.")
                 .css("color", "red");
-            $(this).css("border-color", "red");
+            $("#password").css("border-color", "red");
         }
 
         // Check if there are any errors
@@ -84,21 +76,17 @@ $(document).ready(function () {
     $("body").on("input", "#email", function () {
         var email = $(this).val();
 
-        if (!isValidEmail(email)) {
+        if (!email) {
+            $("#email_error").text("Email is required.").css("color", "red");
+            $("#email").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
             $("#email_error")
                 .text("Please enter a valid email address.")
                 .css("color", "red");
             $("#email").css("border-color", "red");
         } else {
-            if (!email) {
-                $("#email_error")
-                    .text("Email is required.")
-                    .css("color", "red");
-                $("#email").css("border-color", "red");
-            } else {
-                $("#email_error").text("");
-                $("#email").css("border-color", "");
-            }
+            $("#email_error").text("");
+            $("#email").css("border-color", "");
         }
 
         if (email) {
@@ -116,10 +104,10 @@ $(document).ready(function () {
             $("#password_error")
                 .text("Password is required.")
                 .css("color", "red");
-            $(this).css("border-color", "red");
+            $("#password").css("border-color", "red");
         } else {
             $("#password_error").text("");
-            $(this).css("border-color", "");
+            $("#password").css("border-color", "");
         }
     });
 });
