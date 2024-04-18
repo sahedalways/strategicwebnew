@@ -14,6 +14,7 @@ use App\Http\Controllers\RegisterTabController;
 // backend controllers are below
 use App\Http\Controllers\Admin\Article\ArticleController;
 use App\Http\Controllers\Admin\Customer\CustomerController;
+use App\Http\Controllers\Password\PasswordController;
 use App\Http\Controllers\PaymentController;
 
 //Clear route cache:
@@ -60,6 +61,9 @@ Route::middleware('is_user')->group(
 
                 // articles route here
                 Route::resource('article', ArticleController::class);
+
+                // change password resources
+                Route::resource('/change-password', PasswordController::class);
             }
         );
     }
