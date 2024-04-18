@@ -57,14 +57,14 @@ $(document).ready(function () {
             $("#name").css("border-color", "red");
         }
 
-        if (!isValidEmail(email)) {
-            $("#register_email_error")
-                .text("Please enter a valid email address.")
-                .css("color", "red");
-            $("#registerEmail").css("border-color", "red");
-        } else if (!email) {
+        if (!email) {
             $("#register_email_error")
                 .text("Email address is required.")
+                .css("color", "red");
+            $("#registerEmail").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
+            $("#register_email_error")
+                .text("Please enter a valid email address.")
                 .css("color", "red");
             $("#registerEmail").css("border-color", "red");
         }
@@ -168,21 +168,19 @@ $(document).ready(function () {
     $("body").on("input", "#registerEmail", function () {
         var email = $(this).val();
 
-        if (!isValidEmail(email)) {
+        if (!email) {
+            $("#register_email_error")
+                .text("Email is required.")
+                .css("color", "red");
+            $("#registerEmail").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
             $("#register_email_error")
                 .text("Please enter a valid email address.")
                 .css("color", "red");
             $("#registerEmail").css("border-color", "red");
         } else {
-            if (!email) {
-                $("#register_email_error")
-                    .text("Email is required.")
-                    .css("color", "red");
-                $("#registerEmail").css("border-color", "red");
-            } else {
-                $("#register_email_error").text("");
-                $("#registerEmail").css("border-color", "");
-            }
+            $("#register_email_error").text("");
+            $("#registerEmail").css("border-color", "");
         }
 
         if (email) {
