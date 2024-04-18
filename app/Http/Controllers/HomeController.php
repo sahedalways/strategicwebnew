@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -42,7 +43,30 @@ class HomeController extends Controller
             $adminsLatest = User::latest()->where("user_type", "admin")->take(5)->get();
 
 
-            return view('backend.admin.dashboard.dashboard', compact('custo', 'customers', 'admins', 'adminsLatest'));
+
+            // get monthly income
+            $monthlyIncome = Payment::whereYear('created_at', now()->year)
+                ->whereMonth('created_at', now()->month)
+                ->sum('amount');
+
+            // get total income
+            $totalIncome = Payment::sum('amount');
+
+
+            // todays sales count
+            $todaySalesCount = Payment::whereDate('created_at', today())->count();
+
+            // monthly sales count
+            $monthlySalesCount = Payment::whereYear('created_at', now()->year)
+                ->whereMonth('created_at', now()->month)
+                ->count();
+
+            // total sales
+            $salesInfo = Payment::get();
+            $totalSalesCount = $salesInfo->count();
+
+
+            return view('backend.admin.dashboard.dashboard', compact('custo', 'customers', 'admins', 'adminsLatest', 'monthlyIncome', 'totalIncome', 'todaySalesCount', 'monthlySalesCount', 'totalSalesCount'));
         }
     }
 }

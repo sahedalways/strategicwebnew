@@ -13,9 +13,9 @@
 
                 </a>
             </li> --}}
-            {{-- <li class="nav-item theme-text">
-                <a href="{{ route('dashboard') }}" class="nav-link">{{ $settings->site_title }} Admin Panel</a>
-            </li> --}}
+            <li class="nav-item theme-text">
+                <a href="{{ route('dashboard') }}" class="nav-link">Strategic Web Admin Panel</a>
+            </li>
         </ul>
 
         <ul class="pr-5 pl-0 list-unstyled">
