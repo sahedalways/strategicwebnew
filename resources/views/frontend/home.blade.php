@@ -13,14 +13,10 @@
     {{-- services here --}}
     @include('frontend.components._services')
 
-    {{-- featured works here --}}
-    @include('frontend.components._home_featured_work')
-
-
     {{-- featured plans here --}}
     @include('frontend.components._home_featured_plans')
 
-
-
+    {{-- featured works here --}}
+    @include('frontend.components._home_featured_work')
 
 @endsection
