@@ -70,6 +70,7 @@ Route::get('/about-us', [PagesController::class, 'aboutUs'])->name('about');
 Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact');
 Route::get('/services', [PagesController::class, 'services'])->name('service');
 Route::get('/press', [PagesController::class, 'press'])->name('press');
+Route::get('/pricing', [PagesController::class, 'pricing'])->name('pricing');
 
 //contact us api
 Route::post('/submit-contact-message', [ContactUsController::class, 'submitContactMessage'])->name('submit-contact-message');

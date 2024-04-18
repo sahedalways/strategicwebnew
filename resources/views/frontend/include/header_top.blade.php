@@ -23,6 +23,10 @@
                           aria-current="page" href="{{ url('/') }}">Home</a>
                   </li>
                   <li class="nav-item ms-lg-4 ms-0">
+                      <a class="nav-link text-white menu-hover-effect {{ request()->is('pricing') ? 'active' : '' }}"
+                          href="{{ route('pricing') }}">Pricing</a>
+                  </li>
+                  <li class="nav-item ms-lg-4 ms-0">
                       <a class="nav-link text-white menu-hover-effect {{ request()->is('about-us') ? 'active' : '' }}"
                           href="{{ route('about') }}">About</a>
                   </li>

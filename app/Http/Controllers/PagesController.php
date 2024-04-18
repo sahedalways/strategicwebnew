@@ -32,4 +32,10 @@ class PagesController extends Controller
 
         return view('frontend.press', ['articles' => $articles]);
     }
+
+
+    public function pricing()
+    {
+        return view('frontend.pricing');
+    }
 }
