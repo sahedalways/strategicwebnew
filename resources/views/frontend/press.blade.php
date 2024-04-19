@@ -9,7 +9,7 @@
          @foreach ($articles as $article)
              @if ($article->display_priority === 'first')
                  <div class="container my-4 col-lg-9 mx-auto">
-                     <a href="#" style="text-decoration: none;"
+                     <a href="{{ route('press-details', ['id' => $article->id]) }}" style="text-decoration: none;"
                          class="mx-auto row text-dark rounded-4 overflow-hidden p-0 shadow-sm img-hover-effect">
                          <div class="col-md-8 p-0 img-sec">
                              <img src="{{ asset('images/article' . "/{$article->id}-1.{$article->image}") }}"
@@ -30,7 +30,9 @@
                      @if ($article->display_priority === 'middle')
                          <div class="col-md-6 mb-4">
                              <div class="rounded-4 overflow-hidden p-0 shadow-sm img-hover-effect">
-                                 <a style="text-decoration: none;" href="#" class="shadow-sm text-dark">
+                                 <a style="text-decoration: none;"
+                                     href="{{ route('press-details', ['id' => $article->id]) }}"
+                                     class="shadow-sm text-dark">
                                      <div class="img-sec">
                                          <img src="{{ asset('images/article' . "/{$article->id}-1.{$article->image}") }}"
                                              alt="article-image" class="w-100">
@@ -61,7 +63,9 @@
                      @if ($article->display_priority === 'last')
                          <div class="col-md-4 mb-4">
                              <div class="rounded-4 overflow-hidden shadow-sm p-0 mr-md-3 img-hover-effect">
-                                 <a style="text-decoration: none;" href="#" class="shadow-sm text-dark">
+                                 <a style="text-decoration: none;"
+                                     href="{{ route('press-details', ['id' => $article->id]) }}"
+                                     class="shadow-sm text-dark">
                                      <div class="img-sec">
                                          <img src="{{ asset('images/article' . "/{$article->id}-1.{$article->image}") }}"
                                              alt="article-image" class="w-100">

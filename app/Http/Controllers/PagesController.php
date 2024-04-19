@@ -34,6 +34,15 @@ class PagesController extends Controller
     }
 
 
+    public function pressItemDetails($id)
+    {
+        // Retrieve all articles from the database
+        $article = Article::where('id', $id)->first();
+
+        return view('frontend.press_details', ['article' => $article]);
+    }
+
+
     public function pricing()
     {
         return view('frontend.pricing');
