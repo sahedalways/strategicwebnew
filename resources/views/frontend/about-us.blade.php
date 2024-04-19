@@ -46,7 +46,7 @@
                 <p data-aos="zoom-in-up">Thank you for considering Strategic Web as your web design and SEO partner. We
                     look forward to
                     collaborating with you and bringing your vision to life!</p>
-                <p data-aos="zoom-in-up">Interested in getting a high-quality website? <a href="#">Contact us here</a>
+                <p data-aos="zoom-in-up">Interested in getting a high-quality website? <a data-bs-toggle="modal" data-bs-target="#contactModal" href="#">Contact us here</a>
                     for a free
                     consultation today.</p>
 
