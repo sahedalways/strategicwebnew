@@ -3,7 +3,7 @@
  @section('content')
 
      <div class="service-hero-sec container">
-         <div class="col-lg-6">
+         <div class="text-center">
              <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-bottom" class="custom-heading"> A
                  full-service digital innovation partner</h1>
 
