@@ -62,7 +62,9 @@
     background: var(--navbar-bg);
     color: rgb(0, 0, 0);
 }
-
+.custom-text-color{
+   color: #6c5ce7
+}
 .menu-hover-effect {
     -webkit-background-clip: text;
     -webkit-text-fill-color: black;
@@ -718,13 +720,14 @@ button.btn.btn-hover-custom:active {
 .owl-dots {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    background: #869791;
+
 }
 
-.owl-dots .owl-dot.active span,
-.owl-dots .owl-dot:hover span {
+/* n {
     background: #869791;
-}
+} */
 
 .owl-dots .owl-dot span {
     width: 10px;
@@ -759,4 +762,10 @@ button.btn.btn-hover-custom:active {
 
 a.custom-link:hover {
     color: #009688;
+}
+.full-height-center-content{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
