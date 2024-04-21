@@ -22,12 +22,16 @@
             <div class="col-md-3 mb-lg-0 mb-3">
                 <h5 class="mb-4">Get In Touch</h5>
                 <div class="icon-container d-flex flex-wrap mt-3">
-                    <a class="icon-link" style="text-decoration: none;" href="#"> <i
-                            class="fs-5 m-3 fa-brands fa-facebook"></i> </a>
-                    <a class="icon-link" href="#"><i class="fs-5 m-3 fa-brands fa-linkedin-in"></i></a>
-                    <a class="icon-link" href="#"><i class="fs-5 m-3 fa-brands fa-instagram"></i></a>
-                    <a class="icon-link" href="#"><i class="fs-5 m-3 fa-brands fa-tiktok"></i></a>
-                    <a class="icon-link" href="#"><i class="fs-5 m-3 fa-brands fa-x-twitter"></i></a>
+                    <a class="icon-link" style="text-decoration: none;" href="https://www.facebook.com/strategic2web">
+                        <i class="fs-5 m-3 fa-brands fa-facebook"></i> </a>
+                    <a class="icon-link" href="www.linkedin.com/company/strategicweb"><i
+                            class="fs-5 m-3 fa-brands fa-linkedin-in"></i></a>
+                    <a class="icon-link" href="www.instagram.com/strategic2web"><i
+                            class="fs-5 m-3 fa-brands fa-instagram"></i></a>
+                    <a class="icon-link" href="www.tiktok.com/@strategic2web"><i
+                            class="fs-5 m-3 fa-brands fa-tiktok"></i></a>
+                    <a class="icon-link" href="www.twitter.com/strategic2web"><i
+                            class="fs-5 m-3 fa-brands fa-x-twitter"></i></a>
                 </div>
 
             </div>
