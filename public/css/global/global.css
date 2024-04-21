@@ -62,8 +62,8 @@
     background: var(--navbar-bg);
     color: rgb(0, 0, 0);
 }
-.custom-text-color{
-   color: #6c5ce7
+.custom-text-color {
+    color: #6c5ce7;
 }
 .menu-hover-effect {
     -webkit-background-clip: text;
@@ -722,7 +722,6 @@ button.btn.btn-hover-custom:active {
     justify-content: center;
     align-items: center;
     background: #869791;
-
 }
 
 /* n {
@@ -761,11 +760,15 @@ button.btn.btn-hover-custom:active {
 }
 
 a.custom-link:hover {
-    color: #3F51B5;
+    color: #3f51b5;
 }
-.full-height-center-content{
+.full-height-center-content {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.post-content {
+    margin-bottom: 20px;
 }
