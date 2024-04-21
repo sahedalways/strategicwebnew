@@ -43,7 +43,8 @@
         min-height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        flex-direction: column;
     }
 
     .custom-link {
@@ -58,22 +59,29 @@
         background-color: #6c5ce7;
         border-color: #6c5ce7;
     }
+
     .nav-link.active:before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 2px;
-    bottom: 5px;
-    left: 0;
-    bottom: -3px;
-    z-index: 0;
-    position: absolute;
-    background: #3f51b5;
-    transition: all 0.3s ease-in-out;
-}
+        display: block;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 5px;
+        left: 0;
+        bottom: -3px;
+        z-index: 0;
+        position: absolute;
+        background: #3f51b5;
+        transition: all 0.3s ease-in-out;
+    }
 </style>
 
 <div style="background: #ededed;" class="full-height-center-content">
+
+    <div class="">
+        <a href="#">
+        <img style="width: 100px;" class="mt-5" src="https://via.placeholder.com/100x100" alt="">
+        </a>
+    </div>
 
     <div class="row justify-content-center align-items-center w-100 my-5">
         {{-- <div class="d-flex justify-content-center my-5">

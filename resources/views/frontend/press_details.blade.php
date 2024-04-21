@@ -7,7 +7,7 @@
           <div class="">
               <div class="mt-5">
 
-                  <img src="{{ asset('images/article' . "/{$article->id}-1.{$article->image}") }}" class="img-fluid mb-4"
+                  <img src="{{ asset('images/article' . "/{$article->id}-1.{$article->image}") }}" class="image-height img-fluid mb-4"
                       alt="Post Image">
 
                   <h1 class=" mb-4">{{ $article->title }}</h1>
