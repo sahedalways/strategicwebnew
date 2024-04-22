@@ -31,11 +31,10 @@
             background: #809f86;
         } */
     .full-height-center-content {
-        min-height: 100vh;
+        min-height: calc(100vh - 93px);
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
+        justify-content: center;
     }
 
     .custom-link {
@@ -66,15 +65,15 @@
     }
 </style>
 
-<div style="background: #ededed;" class="full-height-center-content">
+<div style="background: #ededed;" class="">
 
-    <div class="">
+    <div class="pt-5 d-flex justify-content-center">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('images/main-logo.png') }}" alt="Logo" class="mt-5 loginLogo">
+            <img src="{{ asset('images/main-logo.png') }}" alt="Logo" class="loginLogo">
         </a>
     </div>
 
-    <div class="row justify-content-center align-items-center w-100 my-5">
+    <div class="row justify-content-center align-items-center w-100 py-5 full-height-center-content">
         {{-- <div class="d-flex justify-content-center my-5">
                 @if ($settings->logo_image)
                     <a class="navbar-brand" href="/">
@@ -141,10 +140,10 @@
                                 </div>
                             </div>
                             <div class="text-center my-4">
-                                <button id="login-btn" type="button" class="btn custom-button-style col-md-5 py-2">Login now</button>
+                                <button id="login-btn" type="button" class="btn custom-button-style col-md-5 col-10 py-2">Login now</button>
                             </div>
 
-                            <div class="text-center my-4"><button hidden disabled type="button" class="btn custom-button-style col-md-5 py-2" id="loadingSubmittingBtn"> <i class="fa fa-spinner fa-spin me-3"></i>
+                            <div class="text-center my-4"><button hidden disabled type="button" class="btn custom-button-style col-md-5 col-10 py-2" id="loadingSubmittingBtn"> <i class="fa fa-spinner fa-spin me-3"></i>
                                     Loging</button></div>
 
                             <div class="text-center">
@@ -231,11 +230,11 @@
 
 
                             <div class="text-center my-4">
-                                <button type="button" class="btn custom-button-style col-md-5 py-2" id="register-btn">Register now</button>
+                                <button type="button" class="btn custom-button-style col-md-5 col-10 py-2" id="register-btn">Register now</button>
                             </div>
 
                             <div class="text-center my-4">
-                                <button hidden disabled type="button" class="btn custom-button-style col-md-5 py-2" id="loadingRegisteringBtn">
+                                <button hidden disabled type="button" class="btn custom-button-style col-md-5 col-10 py-2" id="loadingRegisteringBtn">
                                     <i class="fa fa-spinner fa-spin me-3"></i> Registering
                                 </button>
                             </div>
