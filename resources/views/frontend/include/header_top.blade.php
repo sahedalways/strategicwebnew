@@ -5,7 +5,7 @@
               <div class="">
                   <a class="navbar-brand" href="{{ url('/') }}">
                       <img src="{{ asset('images/main-logo.png') }}" alt="Logo"
-                          class="d-inline-block align-top col-md-3 col-10">
+                          class="d-inline-block align-top col-md-4 col-10">
                   </a>
               </div>
               <!-- Toggler -->

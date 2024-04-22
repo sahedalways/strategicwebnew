@@ -251,7 +251,7 @@
                                  Consult us for a free quote
                              </h6>
                          </div>
-                         <div class="row justify-content-center">
+                         <div class="row justify-content-center mt-4">
                              <button class="btn btn-outline-dark col-xl-4 col-6" data-bs-toggle="modal"
                                  data-bs-target="#contactModal">Contact Us</button>
                          </div>

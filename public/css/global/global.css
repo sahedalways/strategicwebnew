@@ -652,11 +652,13 @@ button.btn.btn-hover-custom:active {
 }
 
 .fullscreen img {
-    display: block;
+    display: flex;
     margin: auto;
     max-width: 90%;
     max-height: 90%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    justify-content: center;
+    align-items: center;
 }
 
 .close-btn {
@@ -727,7 +729,7 @@ button.btn.btn-hover-custom:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #869791;
+    margin-top: 20px;
 }
 
 /* n {
@@ -790,4 +792,21 @@ img.image-height{
         height: 50vh;
         width: 100%;
     }
+}
+.full-height-center-res{
+    min-height: calc(100vh - 93px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.custom-button-style {
+    border: 1px solid #6c5ce7;
+    color: #6c5ce7;
+}
+
+.custom-button-style:hover {
+    background: #6c5ce7;
+    color: #ffff;
 }

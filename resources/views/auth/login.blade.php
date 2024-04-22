@@ -10,15 +10,6 @@
     /* .card-body {
             background: #303A32;
         } */
-    .custom-button-style {
-        border: 1px solid #6c5ce7;
-        color: #6c5ce7;
-    }
-
-    .custom-button-style:hover {
-        background: #6c5ce7;
-        color: #ffff;
-    }
 
     .nav-link {
         background: #dee3ff;
@@ -78,10 +69,9 @@
 <div style="background: #ededed;" class="full-height-center-content">
 
     <div class="">
-    <a class="navbar-brand" href="{{ url('/') }}">
-                      <img src="{{ asset('images/main-logo.png') }}" alt="Logo"
-                          class="mt-5 loginLogo">
-                  </a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="{{ asset('images/main-logo.png') }}" alt="Logo" class="mt-5 loginLogo">
+        </a>
     </div>
 
     <div class="row justify-content-center align-items-center w-100 my-5">
@@ -172,7 +162,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="name">Name</label>
+                                    <label class="form-label primary-text-color fw-semibold" for="name">Name</label>
                                     <input id="name" type="text" class="form-control" name="name" value="" required autocomplete="name" autofocus placeholder="Type your name">
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
@@ -184,7 +174,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="registerEmail">Email</label>
+                                    <label class="form-label primary-text-color fw-semibold" for="registerEmail">Email</label>
                                     <input id="registerEmail" type="email" class="form-control" name="registerEmail" value="" required autocomplete="email" autofocus placeholder="Type email address">
                                     @error('registerEmail')
                                     <span class="text-danger">{{ $message }}</span>
@@ -195,7 +185,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="Phone-No">Phone No</label>
+                                    <label class="form-label primary-text-color fw-semibold" for="Phone-No">Phone No</label>
                                     <input class="form-control" name="phone_number" value="" type="number" id="phone_number" placeholder="Type phone number">
                                     @error('phone_number')
                                     <span class="text-danger">{{ $message }}</span>
@@ -206,7 +196,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="password">Password</label>
+                                    <label class="form-label primary-text-color fw-semibold" for="password">Password</label>
                                     <input placeholder="Type password" id="registerPassword" value="" type="password" class="form-control" name="registerPassword" required autocomplete="new-password">
                                     @error('password')
                                     <span class="text-danger">{{ $message }}</span>
@@ -217,7 +207,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="con-password">Confirm
+                                    <label class="form-label primary-text-color fw-semibold" for="con-password">Confirm
                                         Password</label>
                                     <input id="password_confirmation" type="password" class="form-control" value="" name="password_confirmation" required autocomplete="new-password" placeholder="Type confirm password">
                                 </div>
@@ -226,7 +216,7 @@
 
                             <div class="form-group">
                                 <div class="form-group px-4 py-2">
-                                    <label class="form-label primary-text-color" for="gender">Gender</label>
+                                    <label class="form-label primary-text-color fw-semibold" for="gender">Gender</label>
                                     <select name="gender" id="gender" class="form-control">
                                         <option value="" disabled>Select your gender</option>
                                         <option selected value="1">Male</option>

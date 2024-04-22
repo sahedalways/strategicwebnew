@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryImgs.forEach((img, index) => {
         img.addEventListener("click", function () {
             currentImgIndex = index;
-            fullscreen.style.display = "block";
+            fullscreen.style.display = "flex";
             fullscreenImg.src = img.src;
         });
     });
