@@ -78,9 +78,10 @@
 <div style="background: #ededed;" class="full-height-center-content">
 
     <div class="">
-        <a href="#">
-        <img style="width: 100px;" class="mt-5" src="https://via.placeholder.com/100x100" alt="">
-        </a>
+    <a class="navbar-brand" href="{{ url('/') }}">
+                      <img src="{{ asset('images/main-logo.png') }}" alt="Logo"
+                          class="mt-5 loginLogo">
+                  </a>
     </div>
 
     <div class="row justify-content-center align-items-center w-100 my-5">

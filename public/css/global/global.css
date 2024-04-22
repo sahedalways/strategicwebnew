@@ -87,10 +87,16 @@
     line-height: 1.5;
     font-size: 50px;
 }
+.loginLogo{
+    width: 250px;
+}
 
 @media (max-width: 768px) {
     #typewriter {
         font-size: 35px;
+    }
+    .loginLogo{
+        width: 200px;
     }
 
     .bg-shadow {
