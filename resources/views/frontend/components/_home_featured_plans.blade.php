@@ -2,6 +2,30 @@
      <div class="container">
          <h1 class="my-4 pb-4 border-bottom mt-0 fw-bold text-white">Featured Plans</h1>
          <div class="row overflow-hidden mt-5">
+
+         <div class="mb-4 col-md-4">
+                 <div class="card block h-100" data-aos="fade-up" data-aos-easing="linear"
+                     data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                     <div class="card-body text-center bg-hover-pricing d-flex flex-column justify-content-between">
+                         <div>
+                             <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
+                             <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
+                             <h6 class="card-title fw-semibold">Start Up Web Design</h6>
+                             <h5 style="color: gray;" class="card-title mb-3">$189.99</h5>
+                         </div>
+                         <div class="row justify-content-center">
+                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
+                                 @csrf
+                                 @method('POST')
+                                 <input type="hidden" name="service_name" value="Start Up Web Design">
+                                 <input type="hidden" name="total_price" value="189.99">
+                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
              <div class="mb-4 col-md-4">
                  <div class="card block h-100" data-aos="fade-up" data-aos-easing="linear"
                      data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
@@ -9,22 +33,23 @@
                          <div>
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
-                             <h6 class="card-title fw-semibold">Easy web design (Design + Development +
+                             <h6 class="card-title fw-semibold">Professional web design (Design + Development +
                                  Tailored Customization)</h6>
-                             <h5 style="color: gray;" class="card-title mb-3">$199.99</h5>
+                             <h5 style="color: gray;" class="card-title mb-3">$449.99</h5>
                          </div>
                          <div class="row justify-content-center">
                              <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
                                  @csrf
                                  @method('POST')
-                                 <input type="hidden" name="service_name" value="easy web design">
-                                 <input type="hidden" name="total_price" value="199.99">
+                                 <input type="hidden" name="service_name" value="Professional web design">
+                                 <input type="hidden" name="total_price" value="449.99">
                                  <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
                              </form>
                          </div>
                      </div>
                  </div>
              </div>
+           
 
 
              <div class="mb-4 col-md-4">
@@ -34,38 +59,14 @@
                          <div>
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
-                             <h6 class="card-title fw-semibold">Web design</h6>
-                             <h5 style="color: gray;" class="card-title mb-3">$99.99</h5>
-                         </div>
-                         <div class="row justify-content-center">
-                             <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
-                                 @csrf
-                                 @method('POST')
-                                 <input type="hidden" name="service_name" value="Web design">
-                                 <input type="hidden" name="total_price" value="99.99">
-                                 <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
-                             </form>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-
-
-             <div class="mb-4 col-md-4">
-                 <div class="card block h-100" data-aos="fade-up" data-aos-easing="linear"
-                     data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-                     <div class="card-body text-center bg-hover-pricing d-flex flex-column justify-content-between">
-                         <div>
-                             <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
-                             <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
-                             <h6 class="card-title fw-semibold">Digital marketing</h6>
-                             <h5 style="color: gray;" class="card-title mb-3">$499.99</h5>
+                             <h6 class="card-title fw-semibold">Digital Marketing</h6>
+                             <h5 style="color: gray;" class="card-title mb-3">$399.99</h5>
                              <div class="row justify-content-center">
                                  <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
                                      @csrf
                                      @method('POST')
                                      <input type="hidden" name="service_name" value="Digital marketing">
-                                     <input type="hidden" name="total_price" value="499.99">
+                                     <input type="hidden" name="total_price" value="399.99">
                                      <button type="submit" class="btn btn-outline-dark col-xl-4 col-6">Buy Now</button>
                                  </form>
                              </div>
@@ -80,7 +81,7 @@
                          <div>
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
-                             <h6 class="card-title fw-semibold">E-commerce</h6>
+                             <h6 class="card-title fw-semibold">Specialized E-Commerce</h6>
                              <h5 style="color: gray;" class="card-title mb-3">$799.99</h5>
                              <div class="row justify-content-center">
                                  <form action="{{ route('stripe') }}" method="post" enctype="multipart/form-data">
@@ -105,7 +106,7 @@
                          <div>
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Basic Service</h4>
-                             <h6 class="card-title fw-semibold">Graphic design</h6>
+                             <h6 class="card-title fw-semibold">Graphic Design</h6>
                              <h6 class="card-title fw-semibold">(Up to 2 design)</h6>
                              <h5 style="color: gray;" class="card-title mt-3">$15.99</h5>
                          </div>
@@ -131,9 +132,9 @@
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Premium Combo Service</h4>
                              <div class="mb-3">
-                                 <h6 class="card-title fw-semibold">Web design + Digital marketing (4 month) +
-                                     graphic
-                                     design (4 month)</h6>
+                                 <h6 class="card-title fw-semibold">Professional Web Design + Digital Marketing (4 month) +
+                                     Graphic
+                                     Design (4 month)</h6>
                                  <h5 style="color: gray;" class="card-title mt-3">$1499.99</h5>
                              </div>
                          </div>
@@ -161,9 +162,9 @@
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-3">Premium Combo Service</h4>
                              <div class="mb-3">
-                                 <h6 class="card-title fw-semibold">E-commerce + Digital marketing (4 month) +
-                                     graphic
-                                     design</h6>
+                                 <h6 class="card-title fw-semibold">Specialized E-commerce + Digital Marketing (4 month) +
+                                     Graphic
+                                     Design</h6>
                                  <h5 style="color: gray;" class="card-title mt-3">$1999.99</h5>
                              </div>
                          </div>
@@ -190,7 +191,7 @@
                              <img src="{{ asset('images/sale-tag.png') }}" alt="" class="w-25">
                              <h4 style="color: #F15F50;" class="card-title my-4">Premium Combo Service</h4>
                              <div class="mb-3">
-                                 <h6 class="card-title fw-semibold">Digital marketing + E-commerce</h6>
+                                 <h6 class="card-title fw-semibold">Digital Marketing + Specialized E-Commerce</h6>
                                  <h5 style="color: gray;" class="card-title mt-3">$1999.99</h5>
                              </div>
                          </div>

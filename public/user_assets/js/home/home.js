@@ -60,21 +60,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // JavaScript to enable Bootstrap form validation
-function enableFormValidation(formId) {
-    document
-        .getElementById(formId)
-        .addEventListener("submit", function (event) {
-            var form = event.target;
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add("was-validated");
-        });
-}
+// function enableFormValidation(formId) {
+//     document
+//         .getElementById(formId)
+//         .addEventListener("submit", function (event) {
+//             var form = event.target;
+//             if (!form.checkValidity()) {
+//                 event.preventDefault();
+//                 event.stopPropagation();
+//             }
+//             form.classList.add("was-validated");
+//         });
+// }
 
-enableFormValidation("myForm");
-enableFormValidation("myForm-2");
+// enableFormValidation("myForm");
+// enableFormValidation("myForm-2");
 
 // custom dropdown
 function toggleOptionList() {
@@ -95,17 +95,4 @@ function selectOption(option) {
     document.getElementById("optionList").style.display = "none"; // Hide option list after selection
 }
 
-// Add event listener to close the option list when clicking outside of it
-document.addEventListener("click", function (event) {
-    var optionList = document.getElementById("optionList");
-    var textInput = document.getElementById("text");
-    var targetElement = event.target;
 
-    if (
-        optionList.style.display === "block" &&
-        targetElement !== textInput &&
-        !optionList.contains(targetElement)
-    ) {
-        optionList.style.display = "none";
-    }
-});

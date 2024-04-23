@@ -19,17 +19,19 @@
                             <label for="service" class="form-label">Choose a service</label>
                             <select class="form-select" name="service" id="service" required>
                                 <option selected disabled value="">Choose...</option>
-                                <option value="1">Web design</option>
-                                <option value="2">Digital marketing</option>
-                                <option value="3">E-commerce Solution</option>
-                                <option value="4">Graphic design</option>
-                                <option value="5">Premium: Web design + Digital marketing (4 months) + Graphic design
-                                    (4
-                                    months)</option>
+                                <option value="1">Start Up Web Design</option>
+                                <option value="2">Professional web design (Design + Development + Tailored Customization)</option>
+                                <option value="3">Digital Marketing</option>
+                                <option value="4">Specialized E-Commerce</option>
+                                <option value="5">Graphic Design
+                                    (Up to 2 design)</option>
                                 <option value="6">Premium: E-commerce + Digital marketing (4 months) + Graphic design
                                 </option>
-                                <option value="7">Premium: Digital marketing + E-commerce</option>
-                                <option value="8">Graphic design (Up to 20 designs per month)</option>
+                                <option value="7">Professional Web Design + Digital Marketing (4 month) + Graphic Design (4 month)</option>
+                                <option value="8">Specialized E-commerce + Digital Marketing (4 month) + Graphic Design</option>
+                                <option value="8">Digital Marketing + Specialized E-Commerce</option>
+                                <option value="8">Graphic design
+                                    (up to 20 design per month)</option>
                                 <option value="9">Custom package (Provide a description, and we’ll get in touch)
                                 </option>
                             </select>
