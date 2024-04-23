@@ -22,10 +22,11 @@
                         class="d-inline-block align-top col-md-4 col-8">
                 </a>
             </div>
-            <!-- Toggler -->
+           <!-- Toggler -->
             <button class="navbar-toggler shadow-none" type="button" onclick="toggleMenu()">
-                <span class="navbar-toggler-icon"></span>
+                <i id="menuIcon" class="fa fa-bars"></i>
             </button>
+
         </div>
         <!-- Menu -->
         <div class="collapse-menu bg-shadow justify-content-end" id="navbarNav">
@@ -35,10 +36,6 @@
                         aria-current="page" href="{{ url('/') }}">Home</a>
                 </div>
                 <div class="nav-item ms-lg-4 ms-0">
-                    <a class="nav-link text-white menu-hover-effect {{ request()->is('pricing') ? 'active' : '' }}"
-                        href="{{ route('pricing') }}">Pricing</a>
-                </div>
-                <div class="nav-item ms-lg-4 ms-0">
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('about-us') ? 'active' : '' }}"
                         href="{{ route('about') }}">About</a>
                 </div>
@@ -46,6 +43,12 @@
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('services') ? 'active' : '' }}"
                         href="{{ route('service') }}">Services</a>
                 </div>
+                <div class="nav-item ms-lg-4 ms-0">
+                    <a class="nav-link text-white menu-hover-effect {{ request()->is('pricing') ? 'active' : '' }}"
+                        href="{{ route('pricing') }}">Pricing</a>
+                </div>
+               
+           
                 <div class="nav-item ms-lg-4 ms-0">
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('press') ? 'active' : '' }}"
                         href="{{ route('press') }}">Press</a>
@@ -87,9 +90,28 @@
 <script>
     function toggleMenu() {
         var menu = document.getElementById('navbarNav');
-        menu.classList.toggle('expand-menu');
+        var icon = document.getElementById('menuIcon');
+        
+        if (menu.classList.contains('expand-menu')) {
+            // Menu is currently expanded, collapse it
+            menu.classList.remove('expand-menu');
+            // Revert icon to hamburger
+            icon.classList.remove('fa-times'); // Remove Font Awesome cross icon class
+            icon.classList.add('fa', 'fa-bars'); // Add Font Awesome bars icon classes
+        } else {
+            // Menu is currently collapsed, expand it
+            menu.classList.add('expand-menu');
+            // Change icon to cross
+            icon.classList.remove('fa-bars'); // Remove Font Awesome bars icon class
+            icon.classList.add('fa', 'fa-times'); // Add Font Awesome cross icon classes
+        }
     }
 </script>
+
+
+
+
+
 
 
 
@@ -120,18 +142,23 @@
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('/') ? 'active' : '' }}"
                         aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
-                <li class="nav-item ms-lg-4 ms-0">
-                    <a class="nav-link text-white menu-hover-effect {{ request()->is('pricing') ? 'active' : '' }}"
-                        href="{{ route('pricing') }}">Pricing</a>
-                </li>
+
                 <li class="nav-item ms-lg-4 ms-0">
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('about-us') ? 'active' : '' }}"
+                       
                         href="{{ route('about') }}">About</a>
                 </li>
                 <li class="nav-item ms-lg-4 ms-0">
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('services') ? 'active' : '' }}"
                         href="{{ route('service') }}">Services</a>
                 </li>
+
+                <li class="nav-item ms-lg-4 ms-0">
+                    <a class="nav-link text-white menu-hover-effect {{ request()->is('pricing') ? 'active' : '' }}"
+                        href="{{ route('pricing') }}">Pricing</a>
+                </li>
+               
+               
                 <li class="nav-item ms-lg-4 ms-0">
                     <a class="nav-link text-white menu-hover-effect {{ request()->is('press') ? 'active' : '' }}"
                         href="{{ route('press') }}">Press</a>

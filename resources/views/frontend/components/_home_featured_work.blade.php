@@ -17,7 +17,7 @@
                   <img style="cursor: pointer;" src="{{ asset('images/Logo Design/Logo 1.jpg') }}"
                       class="w-100 shadow-1-strong rounded mb-4 gallery-img" alt="Mountains in the Clouds" />
 
-                  <img style="cursor: pointer;" src="{{ asset('images/Landing Page Design/Landing Page Design 3-01.png') }}"
+                  <img style="cursor: pointer;" src="{{ asset('images/Landing Page Design/Landing Page Design 5-01.png') }}"
                       class="w-100 shadow-1-strong rounded mb-4 gallery-img" alt="Boat on Calm Water" />
               </div>
 
@@ -46,19 +46,19 @@
               <img class="image-1"
                   src="{{ asset('images/FlyerDesign/Flyer Design-2.png') }}"
                   alt="Image 1">
-              <img class="image-2" src="{{ asset('images/FlyerDesign/FlyerDesign-1.png') }}" alt="Image 1">
+              <img class="image-2" src="{{ asset('images/FlyerDesign/Medical Flyer Design 1.png') }}" alt="Image 1">
           </div>
 
           <div class="item">
               <img class="image-1"
-                  src="{{ asset('images/Landing Page Design/Landing Page Design 2-01.png') }}"
+                  src="{{ asset('images/Landing Page Design/Landing Page Design 3-01.png') }}"
                   alt="Image 1">
-              <img class="image-2" src="{{ asset('images/Landing Page Design/Landing Page Design 4-01.png') }}" alt="Image 1">
+              <img class="image-2" src="{{ asset('images/Landing Page Design/Landing Page Design 5-01.png') }}" alt="Image 1">
           </div>
 
           <div class="item">
-              <img class="image-1" src="{{ asset('images/Logo Design/Logo 1.jpg') }}" alt="Image 1">
-              <img class="image-2" src="{{ asset('images/Logo Design/Logo 2.png') }}" alt="Image 1">
+              <img class="image-1" src="{{ asset('images/Logo Design/Logo 2.png') }}" alt="Image 1">
+              <img class="image-2" src="{{ asset('images/Logo Design/Logo 1.jpg') }}" alt="Image 1">
           </div>
           <div class="item">
               <img class="image-1"
@@ -73,12 +73,6 @@
               <img class="image-2" src="{{ asset('images/Social Media Kit/Social Media Kit-2.png') }}" alt="Image 1">
           </div>
 
-          <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/Social Media Post For Strategic Web/Strategic Social media ads-.png') }}"
-                  alt="Image 1">
-              <img class="image-2" src="{{ asset('images/Social Media Post For Strategic Web/Strategic-Social-media-ads-deesign-1.jpg') }}" alt="Image 1">
-          </div>
 
       </div>
 

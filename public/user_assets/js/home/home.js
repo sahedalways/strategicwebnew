@@ -76,23 +76,31 @@ document.addEventListener("DOMContentLoaded", function () {
 // enableFormValidation("myForm");
 // enableFormValidation("myForm-2");
 
-// custom dropdown
 function toggleOptionList() {
     var optionList = document.getElementById("optionList");
-    if (
-        optionList.style.display === "" ||
-        optionList.style.display === "none"
-    ) {
+    if (optionList.style.display === "" || optionList.style.display === "none") {
         optionList.style.display = "block";
+        document.addEventListener('click', closeOptionListOnClickOutside);
     } else {
         optionList.style.display = "none";
+        document.removeEventListener('click', closeOptionListOnClickOutside);
     }
 }
 
 function selectOption(option) {
     var inputValue = option.innerText;
     document.getElementById("text").value = inputValue;
-    document.getElementById("optionList").style.display = "none"; // Hide option list after selection
+    document.getElementById("optionList").style.display = "none";
 }
+
+function closeOptionListOnClickOutside(event) {
+    var optionList = document.getElementById("optionList");
+    var target = event.target;
+    if (!optionList.contains(target) && target.id !== 'text') {
+        optionList.style.display = "none";
+        document.removeEventListener('click', closeOptionListOnClickOutside);
+    }
+}
+
 
 

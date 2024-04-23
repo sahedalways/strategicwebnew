@@ -222,10 +222,10 @@
         font-size: 35px;
     }
     .hero-content {
-        height: 70vh;
+        height: 75vh;
     }
     .home-hero-sec{
-        height: 70vh;
+        height: 75vh;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -829,8 +829,14 @@ a.custom-link:hover {
     background: #f3f3f3;
 }
 img.image-height{
-    height: 70vh;
+    height: 50vh;
     width: 100%;
+}
+@media (max-width: 1440px) {
+    img.image-height{
+        height: 60vh;
+        width: 100%;
+    }
 }
 @media (max-width: 768px) {
     img.image-height{
@@ -858,6 +864,13 @@ img.image-height{
 .item img{
     height: 200px;
 }
-.button.owl-dot.active span{
+button.owl-dot.active span{
     background: black;
+}
+#menuIcon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

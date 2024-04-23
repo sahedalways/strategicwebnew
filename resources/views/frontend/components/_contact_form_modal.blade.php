@@ -39,7 +39,7 @@
                             <div id="service_error" class="error-message text-center"></div>
                         </div> --}}
 
-                        <div class="position-relative mb-3" name="service" id="service">
+                        {{-- <div class="position-relative mb-3" name="service" id="service">
                             <label for="text" class="form-label" onclick="toggleOptionList()">Choose a
                                 service</label>
                             <input name="service" type="text" class="form-control bg-light" id="text" value=" Choose.." readonly
@@ -88,7 +88,56 @@
                                 </ul>
                             </div>
                             <div id="service_error" class="error-message text-center"></div>
+                        </div> --}}
+
+                        <div class="position-relative mb-3" name="service" id="service">
+                            <label for="text" class="form-label" onclick="toggleOptionList()">Choose a service</label>
+                            <input name="service" type="text" class="form-control bg-light" id="text" value="Choose.." readonly required onclick="toggleOptionList()">
+                            <div class="option-list border" id="optionList">
+                                <ul class="p-0 mb-0">
+                                    <li value="1" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Start Up Web Design</li>
+
+                                    <li value="2" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Professional web design (Design + Development + Tailored Customization)</li>
+                                    <li value="3" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Digital Marketing</li>
+
+                                    <li value="4" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Specialized E-Commerce</li>
+
+                                    <li value="5" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Graphic Design (Up to 2 design)</li>
+
+                                    <li value="6" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Professional Web Design + Digital Marketing (4 month) + Graphic Design (4 month)</li>
+
+                                    <li value="7" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Specialized E-commerce + Digital Marketing (4 month) + Graphic Design</li>
+
+                                    <li value="8" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Digital Marketing + Specialized E-Commerce</li>
+
+                                    <li value="8" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Graphic design (up to 20 design per month)</li>  
+                                                                        
+                                    <li value="9" class="hover-list" style="padding: .5rem 0.75rem; cursor: pointer;"
+                                        onclick="selectOption(this)">Custom package ( please provide a detailed
+                                        explanation on the description)</li>
+                                </ul>
+                            </div>
+                            <div id="service_error" class="error-message text-center"></div>
                         </div>
+                        
                           
 
                         <div class="mb-3">
