@@ -49,29 +49,39 @@
                                 <ul class="p-0 mb-0">
                                     <li value="1" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Web design</li>
+                                        Start Up Web Design</li>
+
                                     <li value="2" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Digital marketing</li>
+                                        Professional web design (Design + Development + Tailored Customization)</li>
                                     <li value="3" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        E-commerce Solution</li>
+                                        Digital Marketing</li>
+
                                     <li value="4" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Graphic design</li>
+                                        Specialized E-Commerce</li>
+
                                     <li value="5" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Premium: Web design + Digital marketing (4 months) + Graphic design (4
-                                        months)</li>
+                                        Graphic Design (Up to 2 design)</li>
+
                                     <li value="6" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        E-commerce + Digital marketing (4 months) + Graphic design</li>
+                                        Professional Web Design + Digital Marketing (4 month) + Graphic Design (4 month)</li>
+
                                     <li value="7" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Premium: Digital marketing + E-commerce</li>
+                                        Specialized E-commerce + Digital Marketing (4 month) + Graphic Design</li>
+
                                     <li value="8" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
-                                        Graphic design (Up to 20 designs per month)</li>
+                                        Digital Marketing + Specialized E-Commerce</li>
+
+                                    <li value="8" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Graphic design (up to 20 design per month)</li>  
+                                                                        
                                     <li value="9" class="hover-list" style="padding: .5rem 0.75rem; cursor: pointer;"
                                         onclick="selectOption(this)">Custom package ( please provide a detailed
                                         explanation on the description)</li>

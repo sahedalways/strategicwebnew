@@ -858,3 +858,6 @@ img.image-height{
 .item img{
     height: 200px;
 }
+.button.owl-dot.active span{
+    background: black;
+}
