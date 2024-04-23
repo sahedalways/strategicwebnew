@@ -15,7 +15,7 @@
                             <div id="email_error" class="error-message text-center"></div>
                         </div>
 
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="service" class="form-label">Choose a service</label>
                             <select class="form-select" name="service" id="service" required>
                                 <option selected disabled value="">Choose...</option>
@@ -37,7 +37,50 @@
                             </select>
 
                             <div id="service_error" class="error-message text-center"></div>
+                        </div> --}}
+
+                        <div class="position-relative mb-3" name="service" id="service">
+                            <label for="text" class="form-label" onclick="toggleOptionList()">Choose a
+                                service</label>
+                            <input name="service" type="text" class="form-control bg-light" id="text" value=" Choose.." readonly
+                                required onclick="toggleOptionList()">
+
+                            <div class="option-list border" id="optionList">
+                                <ul class="p-0 mb-0">
+                                    <li value="1" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Web design</li>
+                                    <li value="2" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Digital marketing</li>
+                                    <li value="3" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        E-commerce Solution</li>
+                                    <li value="4" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Graphic design</li>
+                                    <li value="5" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Premium: Web design + Digital marketing (4 months) + Graphic design (4
+                                        months)</li>
+                                    <li value="6" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        E-commerce + Digital marketing (4 months) + Graphic design</li>
+                                    <li value="7" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Premium: Digital marketing + E-commerce</li>
+                                    <li value="8" class="border-bottom hover-list"
+                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                        Graphic design (Up to 20 designs per month)</li>
+                                    <li value="9" class="hover-list" style="padding: .5rem 0.75rem; cursor: pointer;"
+                                        onclick="selectOption(this)">Custom package ( please provide a detailed
+                                        explanation on the description)</li>
+                                </ul>
+                            </div>
+                            <div id="service_error" class="error-message text-center"></div>
                         </div>
+                          
+
                         <div class="mb-3">
                             <label for="description" class="form-label">Description <span class="text-danger">required</span>
                                 <small style="font-size: 12px;" class="text-secondary">(please be descriptive)</small>

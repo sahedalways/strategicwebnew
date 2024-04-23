@@ -103,7 +103,7 @@
         background: #f3f3f3;
         margin-top: 10px;
         box-shadow: 0px 6px 20px 0 #4f4f4f30;
-        padding-bottom: 15px;
+        width: 100%;
     }
 }
 
@@ -405,6 +405,9 @@
 .close-btn:hover {
     color: rgb(255, 81, 0);
 }
+.hover-color-icon:hover{
+    color: rgb(194, 54, 19);
+}
 
 .prev-btn,
 .next-btn {
@@ -475,7 +478,11 @@
 .menu-button:hover {
     color: #fff;
 }
-
+span.navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .menu-button:before,
 .menu-button:after {
     content: "";
