@@ -22,48 +22,56 @@
                         <div class="position-relative mb-3" name="service" id="service">
                             <label for="text" class="form-label" onclick="toggleOptionList()">Choose a
                                 service</label>
-                            <input name="service" type="text" class="form-control bg-light" id="text"
-                                value="Choose.." readonly required onclick="toggleOptionList()">
+                            <input name="service" type="text" class="form-control bg-light custom-border-color"
+                                id="service" value="" placeholder="Choose service type" readonly required
+                                onclick="toggleOptionList()">
                             <div class="option-list border" id="optionList">
                                 <ul class="p-0 mb-0">
-                                    <li value="1" class="border-bottom hover-list"
+                                    <li value="Start Up Web Design" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Start Up Web Design</li>
 
-                                    <li value="2" class="border-bottom hover-list"
+                                    <li value="Professional web design (Design + Development + Tailored Customization)"
+                                        class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Professional web design (Design + Development + Tailored Customization)</li>
-                                    <li value="3" class="border-bottom hover-list"
+                                    <li value="Digital Marketing" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Digital Marketing</li>
 
-                                    <li value="4" class="border-bottom hover-list"
+                                    <li value="Specialized E-Commerce" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Specialized E-Commerce</li>
 
-                                    <li value="5" class="border-bottom hover-list"
+                                    <li value="Graphic Design (Up to 2 design)" class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Graphic Design (Up to 2 design)</li>
 
-                                    <li value="6" class="border-bottom hover-list"
+                                    <li value="Professional Web Design + Digital Marketing (4 month) + Graphic Design (4 month)"
+                                        class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Professional Web Design + Digital Marketing (4 month) + Graphic Design (4 month)
                                     </li>
 
-                                    <li value="7" class="border-bottom hover-list"
+                                    <li value="Specialized E-commerce + Digital Marketing (4 month) + Graphic Design"
+                                        class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Specialized E-commerce + Digital Marketing (4 month) + Graphic Design</li>
 
-                                    <li value="8" class="border-bottom hover-list"
+                                    <li value="Digital Marketing + Specialized E-Commerce"
+                                        class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Digital Marketing + Specialized E-Commerce</li>
 
-                                    <li value="8" class="border-bottom hover-list"
+                                    <li value="Graphic design (up to 20 design per month)"
+                                        class="border-bottom hover-list"
                                         style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
                                         Graphic design (up to 20 design per month)</li>
 
-                                    <li value="9" class="hover-list"
-                                        style="padding: .5rem 0.75rem; cursor: pointer;" onclick="selectOption(this)">
+                                    <li value="Custom package ( please provide a detailed
+                                        explanation on the description)"
+                                        class="hover-list" style="padding: .5rem 0.75rem; cursor: pointer;"
+                                        onclick="selectOption(this)">
                                         Custom package ( please provide a detailed
                                         explanation on the description)</li>
                                 </ul>

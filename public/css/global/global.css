@@ -87,7 +87,7 @@
     line-height: 1.5;
     font-size: 50px;
 }
-.loginLogo{
+.loginLogo {
     width: 250px;
 }
 
@@ -95,7 +95,7 @@
     #typewriter {
         font-size: 35px;
     }
-    .loginLogo{
+    .loginLogo {
         width: 200px;
     }
 
@@ -170,7 +170,7 @@
 }
 
 @media (max-width: 768px) {
-    .home-hero-sec{
+    .home-hero-sec {
         height: 55vh !important;
     }
 }
@@ -213,26 +213,25 @@
     .hero-content {
         height: 50vh;
     }
-    .home-hero-sec{
+    .home-hero-sec {
         height: 50vh;
     }
 }
 @media (min-width: 767px) and (max-width: 1440px) {
-    .content-heading{
+    .content-heading {
         font-size: 35px;
     }
     .hero-content {
         height: 75vh;
     }
-    .home-hero-sec{
+    .home-hero-sec {
         height: 75vh;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    .custom-heading{
+    .custom-heading {
         font-size: 35px !important;
     }
-
 }
 
 .hero-content {
@@ -405,7 +404,7 @@
 .close-btn:hover {
     color: rgb(255, 81, 0);
 }
-.hover-color-icon:hover{
+.hover-color-icon:hover {
     color: rgb(194, 54, 19);
 }
 
@@ -568,7 +567,6 @@ span.navbar-toggler-icon {
         height: 55vh;
     }
 
-
     .custom-heading {
         font-size: 35px;
     }
@@ -587,10 +585,10 @@ span.navbar-toggler-icon {
 }
 
 @media (max-width: 767px) {
-    .custom-image-handle{
+    .custom-image-handle {
         width: 50% !important;
     }
-    
+
     .custom-heading {
         font-size: 35px;
     }
@@ -828,29 +826,28 @@ a.custom-link:hover {
 .img-hover-effect:hover {
     background: #f3f3f3;
 }
-img.image-height{
+img.image-height {
     height: 50vh;
     width: 100%;
 }
 @media (max-width: 1440px) {
-    img.image-height{
+    img.image-height {
         height: 60vh;
         width: 100%;
     }
 }
 @media (max-width: 768px) {
-    img.image-height{
+    img.image-height {
         height: 50vh;
         width: 100%;
     }
 }
-.full-height-center-res{
+.full-height-center-res {
     min-height: calc(100vh - 93px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .custom-button-style {
     border: 1px solid #6c5ce7;
@@ -861,13 +858,13 @@ img.image-height{
     background: #6c5ce7;
     color: #ffff;
 }
-.item img{
+.item img {
     height: 200px;
 }
-button.owl-dot.active span{
+button.owl-dot.active span {
     background: black;
 }
-#menuIcon{
+#menuIcon {
     width: 30px;
     height: 30px;
     display: flex;

@@ -44,20 +44,23 @@ $(document).ready(function () {
     // validate contact us form
     function validateContactUsForm() {
         var email = $("#email").val();
-        var service = $("#service").val();
+        var service = $(".custom-border-color").val();
         var description = $("#description").val();
 
         // Reset error messages and border colors
         $("#email_error", "#description_error", "#service_error").text("");
-        $("#email", "#service", "#description").css("border-color", "");
+        $("#email", ".custom-border-color", "#description").css(
+            "border-color",
+            ""
+        );
 
-        if (!isValidEmail(email)) {
+        if (!email) {
+            $("#email_error").text("Email is required.").css("color", "red");
+            $("#email").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
             $("#email_error")
                 .text("Please enter a valid email address.")
                 .css("color", "red");
-            $("#email").css("border-color", "red");
-        } else if (!email) {
-            $("#email_error").text("Email is required.").css("color", "red");
             $("#email").css("border-color", "red");
         }
 
@@ -65,7 +68,7 @@ $(document).ready(function () {
             $("#service_error")
                 .text("Service type is required.")
                 .css("color", "red");
-            $("#service").css("border-color", "red");
+            $(".custom-border-color").css("border-color", "red");
         }
 
         if (!description) {
@@ -102,21 +105,17 @@ $(document).ready(function () {
     $("body").on("input", "#email", function () {
         var email = $(this).val();
 
-        if (!isValidEmail(email)) {
+        if (!email) {
+            $("#email_error").text("Email is required.").css("color", "red");
+            $("#email").css("border-color", "red");
+        } else if (!isValidEmail(email)) {
             $("#email_error")
                 .text("Please enter a valid email address.")
                 .css("color", "red");
             $("#email").css("border-color", "red");
         } else {
-            if (!email) {
-                $("#email_error")
-                    .text("Email is required.")
-                    .css("color", "red");
-                $("#email").css("border-color", "red");
-            } else {
-                $("#email_error").text("");
-                $("#email").css("border-color", "");
-            }
+            $("#email_error").text("");
+            $("#email").css("border-color", "");
         }
 
         if (email) {
@@ -127,17 +126,17 @@ $(document).ready(function () {
     });
 
     // service input event handler
-    $("#service").on("input", function () {
-        var service = $("#service").val();
+    $(".custom-border-color").on("input", function () {
+        var service = $(".custom-border-color").val();
 
         if (!service) {
             $("#service_error")
                 .text("Service type is required.")
                 .css("color", "red");
-            $("#service").css("border-color", "red");
+            $(".custom-border-color").css("border-color", "red");
         } else {
             $("#service_error").text("");
-            $("#service").css("border-color", "");
+            $(".custom-border-color").css("border-color", "");
         }
     });
 
