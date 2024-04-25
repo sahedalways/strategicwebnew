@@ -126,18 +126,10 @@ $(document).ready(function () {
     });
 
     // service input event handler
-    $(".custom-border-color").on("input", function () {
-        var service = $(".custom-border-color").val();
 
-        if (!service) {
-            $("#service_error")
-                .text("Service type is required.")
-                .css("color", "red");
-            $(".custom-border-color").css("border-color", "red");
-        } else {
-            $("#service_error").text("");
-            $(".custom-border-color").css("border-color", "");
-        }
+    $(".custom-border-color").on("blur", function () {
+        $("#service_error").text("");
+        $(".custom-border-color").css("border-color", "");
     });
 
     // description input event handler
