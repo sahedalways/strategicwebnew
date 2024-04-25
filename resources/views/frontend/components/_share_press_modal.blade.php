@@ -17,9 +17,11 @@
 
                      <a class="icon-link" id="twitter-btn"><i class="fs-5 m-3 fa-brands fa-x-twitter"></i></a>
 
-                     <a class="icon-link" id="copy-btn" onclick="copyLink()">
-                         <i class="fs-5 m-3 fas fa-copy"></i> Copy Link
-                     </a>
+                    <div style="cursor: pointer;" onclick="copyLink()" class="d-flex align-items-center">
+                        <a class="icon-link" id="copy-btn">
+                            <i class="fs-5 m-3 fas fa-copy"></i>                       
+                        </a>                     
+                    </div>
                  </div>
              </div>
 
