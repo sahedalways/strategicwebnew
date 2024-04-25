@@ -12,7 +12,8 @@
                 <div class="modal-body">
                     <form id="myForm" class="needs-validation contactUsForm" novalidate>
                         <div class="mb-3">
-                            <label for="validationCustom05" class="form-label">Email address</label>
+                            <label for="validationCustom05" class="form-label">Email address :</label> <span
+                                class="text-danger">required</span>
                             <input type="email" class="form-control" name="email" id="email"
                                 placeholder="Enter your email" required>
                             <div id="email_error" class="error-message text-center"></div>
@@ -21,7 +22,7 @@
 
                         <div class="position-relative mb-3" name="service" id="service">
                             <label for="text" class="form-label" onclick="toggleOptionList()">Choose a
-                                service</label>
+                                service :</label> <span class="text-danger">required</span>
                             <input name="service" type="text" class="form-control bg-light custom-border-color"
                                 id="service" value="" placeholder="Choose service type" readonly required
                                 onclick="toggleOptionList()">
@@ -82,7 +83,7 @@
 
 
                         <div class="mb-3">
-                            <label for="description" class="form-label">Description <span
+                            <label for="description" class="form-label">Description : <span
                                     class="text-danger">required</span>
                                 <small style="font-size: 12px;" class="text-secondary">(please be descriptive)</small>
                             </label>
