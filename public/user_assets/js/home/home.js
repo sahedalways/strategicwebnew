@@ -25,39 +25,44 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const galleryImgs = document.querySelectorAll(".gallery-img");
-    const fullscreen = document.querySelector(".fullscreen");
-    const fullscreenImg = document.querySelector(".fullscreen-img");
-    const closeBtn = document.querySelector(".close-btn");
-    const prevBtn = document.querySelector(".prev");
-    const nextBtn = document.querySelector(".next");
-    let currentImgIndex;
+    setupGallery(".gallery-img");
+    setupGallery(".gallery-img-2");
 
-    galleryImgs.forEach((img, index) => {
-        img.addEventListener("click", function () {
-            currentImgIndex = index;
-            fullscreen.style.display = "flex";
-            fullscreenImg.src = img.src;
+    function setupGallery(selector) {
+        const galleryImgs = document.querySelectorAll(selector);
+        const fullscreen = document.querySelector(".fullscreen");
+        const fullscreenImg = document.querySelector(".fullscreen-img");
+        const closeBtn = document.querySelector(".close-btn");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        let currentImgIndex;
+
+        galleryImgs.forEach((img, index) => {
+            img.addEventListener("click", function () {
+                currentImgIndex = index;
+                fullscreen.style.display = "flex";
+                fullscreenImg.src = img.src;
+            });
         });
-    });
 
-    closeBtn.addEventListener("click", function () {
-        fullscreen.style.display = "none";
-    });
+        closeBtn.addEventListener("click", function () {
+            fullscreen.style.display = "none";
+        });
 
-    prevBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        currentImgIndex =
-            (currentImgIndex - 1 + galleryImgs.length) % galleryImgs.length;
-        fullscreenImg.src = galleryImgs[currentImgIndex].src;
-    });
+        prevBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            currentImgIndex = (currentImgIndex - 1 + galleryImgs.length) % galleryImgs.length;
+            fullscreenImg.src = galleryImgs[currentImgIndex].src;
+        });
 
-    nextBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        currentImgIndex = (currentImgIndex + 1) % galleryImgs.length;
-        fullscreenImg.src = galleryImgs[currentImgIndex].src;
-    });
+        nextBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            currentImgIndex = (currentImgIndex + 1) % galleryImgs.length;
+            fullscreenImg.src = galleryImgs[currentImgIndex].src;
+        });
+    }
 });
+
 
 // JavaScript to enable Bootstrap form validation
 // function enableFormValidation(formId) {
