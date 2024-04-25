@@ -162,7 +162,7 @@
 .home-hero-sec {
     position: relative;
     /* background-image: url('./img/home-banner.png'); */
-    height: 500px;
+    height: 75vh;
     min-height: 100%;
     z-index: 111;
     /* background-size: cover;
@@ -171,7 +171,7 @@
 
 @media (max-width: 768px) {
     .home-hero-sec{
-        height: 400px !important;
+        height: 55vh !important;
     }
 }
 
@@ -189,7 +189,7 @@
 .about-hero-sec {
     position: relative;
     background: linear-gradient(359deg, #f7f7f7, white);
-    height: 500px;
+    height: 50dvh;
     min-height: 100%;
     z-index: 111;
     display: flex;
@@ -209,7 +209,7 @@
     left: 0;
     z-index: -1;
 } */
-/* @media (min-width: 1439px) and (max-width: 2560px) {
+@media (min-width: 1439px) and (max-width: 2560px) {
     .hero-content {
         height: 50vh;
     }
@@ -233,11 +233,11 @@
         font-size: 35px !important;
     }
 
-} */
+}
 
 .hero-content {
     line-height: 30px;
-    height: 500px;
+    /* height: 75vh; */
     display: flex;
     align-items: center;
 }
@@ -510,14 +510,20 @@ span.navbar-toggler-icon {
 }
 
 .service-hero-sec {
-    height: 500px;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+@media (max-width: 1440px) {
+    .service-hero-sec {
+        height: 70vh;
+    }
+}
+
 .custom-heading {
-    font-size: 50px;
+    font-size: 64px;
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 40px;
@@ -555,11 +561,11 @@ span.navbar-toggler-icon {
 
 @media (max-width: 768px) {
     .service-hero-sec {
-        height: 400px;
+        height: 55vh;
     }
 
     .hero-content {
-        height: 400px;
+        height: 55vh;
     }
 
 
