@@ -42,44 +42,31 @@
 
   <div class="container py-5 pt-0">
       <div class="owl-carousel">
-          <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/graphic/graphic (1).jpg') }}"
-                  alt="Image 1">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (2).jpg') }}" alt="Image 1">
-          </div>
+       
 
           <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/graphic/graphic (3).jpg') }}"
-                  alt="Image 1">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (4).jpg') }}" alt="Image 2">
-          </div>
-
-          <div class="item">
-              <img class="image-1" src="{{ asset('images/graphic/graphic (5).jpg') }}" alt="Image 3">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (6).jpg') }}" alt="Image 4">
+              <img class="image-1" src="{{ asset('images/graphic/Landing-Page 5-01.jpg') }}" alt="Image 3">
+              <img class="image-2" src="{{ asset('images/graphic/Landing-Page 4-01.jpg') }}" alt="Image 4">
           </div>
           <div class="item">
               <img class="image-1"
-                  src="{{ asset('images/graphic/graphic (7).jpg') }}"
+                  src="{{ asset('images/graphic/Landing-Page 2-01.jpg') }}"
                   alt="Image 1">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (8).jpg') }}" alt="Image 5">
+              <img class="image-2" src="{{ asset('images/graphic/Landing-Page 2-3-01.jpg') }}" alt="Image 5">
           </div>
           <div class="item">
               <img class="image-1"
-                  src="{{ asset('images/graphic/graphic (10).jpg') }}"
+                  src="{{ asset('images/graphic/Landing-Page 1-01-01.jpg') }}"
                   alt="Image 1">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (11).jpg') }}" alt="Image 6">
+              <img class="image-2" src="{{ asset('images/graphic/graphic (3).jpg') }}" alt="Image 6">
           </div>
           <div class="item">
               <img class="image-1"
-                  src="{{ asset('images/graphic/graphic (12).jpg') }}"
+                  src="{{ asset('images/graphic/Screenshot_2.png') }}"
                   alt="Image 1">
-              <img class="image-2" src="{{ asset('images/graphic/graphic (13).jpg') }}" alt="Image 7">
+              <img class="image-2" src="{{ asset('images/graphic/Screenshot_1.png') }}" alt="Image 7">
           </div>
-
-
+      
       </div>
 
   </div>

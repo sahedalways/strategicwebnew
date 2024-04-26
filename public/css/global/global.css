@@ -522,6 +522,12 @@ span.navbar-toggler-icon {
 } */
 
 .custom-heading {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+.custom-heading-2 {
     font-size: 50px;
     font-weight: 700;
     color: var(--accent-color);
@@ -567,7 +573,8 @@ span.navbar-toggler-icon {
         height: 400px;
     }
 
-    .custom-heading {
+    .custom-heading,
+    .custom-heading-2 {
         font-size: 35px;
     }
 
@@ -589,7 +596,8 @@ span.navbar-toggler-icon {
         width: 50% !important;
     }
 
-    .custom-heading {
+    .custom-heading,
+    .custom-heading-2 {
         font-size: 35px;
     }
 

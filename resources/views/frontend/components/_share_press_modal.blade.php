@@ -16,6 +16,8 @@
                      <a class="icon-link" id="linkedin-btn"><i class="fs-5 m-3 fa-brands fa-linkedin-in"></i></a>
 
                      <a class="icon-link" id="twitter-btn"><i class="fs-5 m-3 fa-brands fa-x-twitter"></i></a>
+                     <a class="icon-link" href="https://www.pinterest.com/strategic2web/">
+                        <i class="fs-5 m-3 fa-brands fa-pinterest"></i></a>
 
                     <div style="cursor: pointer;" onclick="copyLink()" class="d-flex align-items-center">
                         <a class="icon-link" id="copy-btn">

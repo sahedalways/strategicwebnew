@@ -31,9 +31,9 @@
                     <a class="icon-link" href="https://www.instagram.com/strategic2web/"><i
                             class="fs-5 m-3 fa-brands fa-instagram"></i></a>
 
-                    <a class="icon-link" href="https://www.tiktok.com/@strategic2web"><i
-                            class="fs-5 m-3 fa-brands fa-tiktok"></i></a>
-                            
+                    <a class="icon-link" href="https://www.pinterest.com/strategic2web/">
+                        <i class="fs-5 m-3 fa-brands fa-pinterest"></i></a>
+
                     <a class="icon-link" href="https://twitter.com/strategic2web"><i
                             class="fs-5 m-3 fa-brands fa-x-twitter"></i></a>
                 </div>
