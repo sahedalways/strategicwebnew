@@ -8,8 +8,7 @@
     <title>@yield('title')</title>
 
     <!-- Favicon -->
-    {{-- <link rel="icon" type="image/png"
-        href="{{ asset('images/site-settings' . "/{$settings->id}-2.{$settings->favicon}") }}"> --}}
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

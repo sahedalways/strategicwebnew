@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>@yield('title')</title>
-    {{-- <link rel="icon" type="image/png"
-        href="{{ asset('images/site-settings' . "/{$settings->id}-2.{$settings->favicon}") }}"> --}}
+
+    {{-- favicon here --}}
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
     <!-- Global CSS -->
     <link rel="stylesheet" href="{{ asset('css/global/global.css') }}">
     <link href="{{ asset('/admin_assets') }}/assets/css/loader.css" rel="stylesheet" type="text/css" />
