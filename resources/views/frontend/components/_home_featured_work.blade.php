@@ -71,7 +71,7 @@
 
   </div>
 
-  <div class="container p-0">
+  <div class="container">
     <h4 style="color: #9C27B0;" class="pb-4 mt-0 fw-semibold">Degital Marketing</h4>
       <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">

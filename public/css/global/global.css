@@ -713,7 +713,7 @@ button.btn.btn-hover-custom:active {
 }
 
 .close-btn {
-    color: #fff;
+    color: #FF5722;
     font-size: 50px;
     position: absolute;
     top: 15px;
@@ -723,7 +723,7 @@ button.btn.btn-hover-custom:active {
 
 .prev,
 .next {
-    color: #fff;
+    color: #009688;
     font-size: 50px;
     position: absolute;
     top: 50%;
