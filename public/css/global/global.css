@@ -62,18 +62,18 @@
     background: var(--navbar-bg);
     color: rgb(0, 0, 0);
 }
+
 .custom-text-color {
     color: #6c5ce7;
 }
+
 .menu-hover-effect {
     -webkit-background-clip: text;
     -webkit-text-fill-color: black;
-    background-image: linear-gradient(
-        to right,
-        #1b40de,
-        #1b40de 50%,
-        #000000 50%
-    );
+    background-image: linear-gradient(to right,
+            #1b40de,
+            #1b40de 50%,
+            #000000 50%);
     background-size: 200% 100%;
     background-position: -100%;
     transition: all 0.3s ease-in-out;
@@ -87,6 +87,7 @@
     line-height: 1.5;
     font-size: 50px;
 }
+
 .loginLogo {
     width: 250px;
 }
@@ -95,6 +96,7 @@
     #typewriter {
         font-size: 35px;
     }
+
     .loginLogo {
         width: 200px;
     }
@@ -234,7 +236,7 @@
 } */
 
 .hero-content {
-    line-height: 30px;
+    /* line-height: 30px; */
     /* height: 75vh; */
     height: 500px;
     display: flex;
@@ -404,6 +406,7 @@
 .close-btn:hover {
     color: rgb(255, 81, 0);
 }
+
 .hover-color-icon:hover {
     color: rgb(194, 54, 19);
 }
@@ -477,11 +480,13 @@
 .menu-button:hover {
     color: #fff;
 }
+
 span.navbar-toggler-icon {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .menu-button:before,
 .menu-button:after {
     content: "";
@@ -527,6 +532,7 @@ span.navbar-toggler-icon {
     color: var(--accent-color);
     margin-bottom: 40px;
 }
+
 .custom-heading-2 {
     font-size: 50px;
     font-weight: 700;
@@ -690,7 +696,8 @@ button.btn.btn-hover-custom:active {
     transform: scale(1.05);
 }
 
-.fullscreen {
+.fullscreen,
+.fullscreen-2 {
     display: none;
     position: fixed;
     z-index: 9999;
@@ -702,7 +709,8 @@ button.btn.btn-hover-custom:active {
     overflow: auto;
 }
 
-.fullscreen img {
+.fullscreen img,
+.fullscreen-2 img {
     display: flex;
     margin: auto;
     max-width: 90%;
@@ -723,13 +731,26 @@ button.btn.btn-hover-custom:active {
 
 .prev,
 .next {
-    color: #009688;
-    font-size: 50px;
+    color: #717171;
+    font-size: 40px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     text-decoration: none;
+}
+
+@media (max-width: 767px) {
+
+    .prev,
+    .next {
+        font-size: 20px;
+
+    }
+
+    .close-btn {
+        font-size: 30px;
+    }
 }
 
 .prev {
@@ -821,6 +842,7 @@ button.btn.btn-hover-custom:active {
 a.custom-link:hover {
     color: #3f51b5;
 }
+
 .full-height-center-content {
     min-height: 100vh;
     display: flex;
@@ -831,25 +853,30 @@ a.custom-link:hover {
 .post-content {
     margin-bottom: 20px;
 }
+
 .img-hover-effect:hover {
     background: #f3f3f3;
 }
+
 img.image-height {
     height: 50vh;
     width: 100%;
 }
+
 @media (max-width: 1440px) {
     img.image-height {
         height: 60vh;
         width: 100%;
     }
 }
+
 @media (max-width: 768px) {
     img.image-height {
         height: 50vh;
         width: 100%;
     }
 }
+
 .full-height-center-res {
     min-height: calc(100vh - 93px);
     display: flex;
@@ -866,12 +893,15 @@ img.image-height {
     background: #6c5ce7;
     color: #ffff;
 }
+
 .item img {
     height: 200px;
 }
+
 button.owl-dot.active span {
     background: black;
 }
+
 #menuIcon {
     width: 30px;
     height: 30px;

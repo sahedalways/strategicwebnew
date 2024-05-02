@@ -73,7 +73,7 @@
         </a>
     </div>
 
-    <div class="row justify-content-center align-items-center w-100 py-5 full-height-center-content">
+    <div class="row justify-content-center align-items-center w-100 py-5 full-height-center-content mx-0">
         {{-- <div class="d-flex justify-content-center my-5">
                 @if ($settings->logo_image)
                     <a class="navbar-brand" href="/">

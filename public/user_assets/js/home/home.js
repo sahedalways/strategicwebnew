@@ -24,17 +24,17 @@ $(document).ready(function () {
     });
 });
 
+// first galery
 document.addEventListener("DOMContentLoaded", function () {
     setupGallery(".gallery-img");
-    setupGallery(".gallery-img-2");
 
     function setupGallery(selector) {
         const galleryImgs = document.querySelectorAll(selector);
         const fullscreen = document.querySelector(".fullscreen");
         const fullscreenImg = document.querySelector(".fullscreen-img");
         const closeBtn = document.querySelector(".close-btn");
-        const prevBtn = document.querySelector(".prev");
-        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".gallery-img-prev");
+        const nextBtn = document.querySelector(".gallery-img-next");
         let currentImgIndex;
 
         galleryImgs.forEach((img, index) => {
@@ -62,6 +62,48 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// second gallery
+document.addEventListener("DOMContentLoaded", function () {
+    setupGallery(".gallery-img-2");
+
+    function setupGallery(selector) {
+        const galleryImgs = document.querySelectorAll(selector);
+        const fullscreen = document.querySelector(".fullscreen-2");
+        const fullscreenImg = fullscreen.querySelector(".fullscreen-img");
+        const closeBtn = fullscreen.querySelector(".close-btn");
+        const prevBtn = fullscreen.querySelector(".gallery-img-2-prev");
+        const nextBtn = fullscreen.querySelector(".gallery-img-2-next");
+        let currentImgIndex;
+
+        galleryImgs.forEach((img, index) => {
+            img.addEventListener("click", function () {
+                currentImgIndex = index;
+                fullscreen.style.display = "flex";
+                fullscreenImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            fullscreen.style.display = "none";
+        });
+
+        prevBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            currentImgIndex = (currentImgIndex - 1 + galleryImgs.length) % galleryImgs.length;
+            fullscreenImg.src = galleryImgs[currentImgIndex].src;
+        });
+
+        nextBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            currentImgIndex = (currentImgIndex + 1) % galleryImgs.length;
+            fullscreenImg.src = galleryImgs[currentImgIndex].src;
+        });
+    }
+});
+
+
+
 
 
 // JavaScript to enable Bootstrap form validation

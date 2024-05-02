@@ -3,13 +3,13 @@
 
 
       <div class="container p-0">
-        <h4 style="color: #9C27B0;" class="pb-4 mt-0 fw-semibold">Graphic Design</h4>
+          <h4 style="color: #9C27B0;" class="pb-4 mt-0 fw-semibold">Graphic Design</h4>
           <div class="row">
               <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                   <img style="cursor: pointer;" src="{{ asset('images/graphic/graphic (1).jpg') }}"
                       class="w-100 shadow-1-strong rounded mb-4 gallery-img" alt="image 1" />
 
-                      <img style="cursor: pointer;" src="{{ asset('images/graphic/graphic (5).jpg') }}"
+                  <img style="cursor: pointer;" src="{{ asset('images/graphic/graphic (5).jpg') }}"
                       class="w-100 shadow-1-strong rounded mb-4 gallery-img" alt="image 2" />
               </div>
 
@@ -34,51 +34,45 @@
       <div class="fullscreen">
           <span class="close-btn">&times;</span>
           <img class="fullscreen-img" src="">
-          <a class="prev" href="#">&#10094;</a>
-          <a class="next" href="#">&#10095;</a>
+          <a class="prev gallery-img-prev" href="#"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a class="next gallery-img-next" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
       </div>
   </div>
 
 
   <div class="container py-5 pt-0">
       <div class="owl-carousel">
-       
+
 
           <div class="item">
               <img class="image-1" src="{{ asset('images/graphic/Landing-Page 5-01.jpg') }}" alt="Image 3">
               <img class="image-2" src="{{ asset('images/graphic/Landing-Page 4-01.jpg') }}" alt="Image 4">
           </div>
           <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/graphic/Landing-Page 2-01.jpg') }}"
-                  alt="Image 1">
+              <img class="image-1" src="{{ asset('images/graphic/Landing-Page 2-01.jpg') }}" alt="Image 1">
               <img class="image-2" src="{{ asset('images/graphic/Landing-Page 2-3-01.jpg') }}" alt="Image 5">
           </div>
           <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/graphic/Landing-Page 1-01-01.jpg') }}"
-                  alt="Image 1">
+              <img class="image-1" src="{{ asset('images/graphic/Landing-Page 1-01-01.jpg') }}" alt="Image 1">
               <img class="image-2" src="{{ asset('images/graphic/graphic (3).jpg') }}" alt="Image 6">
           </div>
           <div class="item">
-              <img class="image-1"
-                  src="{{ asset('images/graphic/Screenshot_2.png') }}"
-                  alt="Image 1">
+              <img class="image-1" src="{{ asset('images/graphic/Screenshot_2.png') }}" alt="Image 1">
               <img class="image-2" src="{{ asset('images/graphic/Screenshot_1.png') }}" alt="Image 7">
           </div>
-      
+
       </div>
 
   </div>
 
   <div class="container">
-    <h4 style="color: #9C27B0;" class="pb-4 mt-0 fw-semibold">Degital Marketing</h4>
+      <h4 style="color: #9C27B0;" class="pb-4 mt-0 fw-semibold">Degital Marketing</h4>
       <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
               <img style="cursor: pointer;" src="{{ asset('images/Digital Marketing/digital-(1).png') }}"
                   class="w-100 shadow-1-strong shadow-sm border rounded mb-4 gallery-img-2" alt="image 1" />
 
-                  <img style="cursor: pointer;" src="{{ asset('images/Digital Marketing/digital-(2).png') }}"
+              <img style="cursor: pointer;" src="{{ asset('images/Digital Marketing/digital-(2).png') }}"
                   class="w-100 shadow-1-strong shadow-sm border rounded mb-4 gallery-img-2" alt="image 2" />
           </div>
 
@@ -92,7 +86,14 @@
 
           <div class="col-lg-4 mb-4 mb-lg-0">
               <img style="cursor: pointer;" src="{{ asset('images/Digital Marketing/digital-(5).png') }}"
-                  class="w-100 shadow-1-strong shadow-sm border rounded mb-4 gallery-img-2" alt="image 5" />           
+                  class="w-100 shadow-1-strong shadow-sm border rounded mb-4 gallery-img-2" alt="image 5" />
           </div>
+      </div>
+
+      <div class="fullscreen-2">
+          <span class="close-btn">&times;</span>
+          <img class="fullscreen-img" src="">
+          <a class="prev gallery-img-2-prev" href="#"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a class="next gallery-img-2-next" href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
       </div>
   </div>
