@@ -3,13 +3,13 @@
 
 @section('content')
     <div class="container row mx-auto py-3 py-md-5 justify-content-center">
-        <div class="card col-md-8">
+        <div class="card col-md-9">
             <div class="card-body p-4">
 
 
-                <h4 class="lh-base text-center fw-normal" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h3 style="color: #6c5ce7" class="lh-base text-center mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     Your go-to web design company located in the heart of New York
-                    City. We take pride in providing top-notch web solutions to clients worldwide.</h4>
+                    City. We take pride in providing top-notch web solutions to clients worldwide.</h3>
 
                 <div class="mt-5" data-aos="zoom-in-up">
                     <h3>What we specialize in:</h3>
@@ -29,7 +29,7 @@
                     <h3>What we are experts in:</h3>
                     <ul class="service-list">
                         <li> <i class="fa-solid fa-right-long me-2"></i> Website designing</li>
-                        <li> <i class="fa-solid fa-right-long me-2"></i> Programming</li>
+                        <li> <i class="fa-solid fa-right-long me-2"></i> Digital Marketing</li>
                         <li> <i class="fa-solid fa-right-long me-2"></i> E-commerce solutions</li>
                         <li> <i class="fa-solid fa-right-long me-2"></i> Graphic Design</li>
                     </ul>

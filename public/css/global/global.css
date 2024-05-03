@@ -740,6 +740,10 @@ button.btn.btn-hover-custom:active {
     cursor: pointer;
     text-decoration: none;
 }
+.prev:hover,
+.next:hover {
+    color: #8b8b8b;
+}
 
 @media (max-width: 767px) {
 
