@@ -449,6 +449,7 @@
     text-decoration: none;
     border: 1px solid #f1605000;
     margin: 5px;
+    cursor: pointer;
 }
 
 .icon-link:hover i {
@@ -911,4 +912,14 @@ button.owl-dot.active span {
 }
 .custom-line-height{
     line-height: inherit;
+}
+.share-icon {
+    color: var(--accent-color);
+    transition: .4s;
+}.share-icon:hover {
+    color: var(--link-hover-text-color);
+}
+.press-desc p {
+    font-weight: 500;
+    color: #636363;
 }

@@ -29,17 +29,22 @@
                         <div class="col-md-4 p-4 shadow-sm">
                             <div style="font-size: 12px;" class="text-secondary mb-3">PRESS RELEASE</div>
                             <h2 class="fw-semibold">{{ $article->title }}</h2>
-                            <p class="press-author mb-1">{{ $article->author }}</p>
+                            <h5 class="press-author mb-1">{{ $article->author }}</h5>
                             <div style="font-size: 12px;" class="text-secondary fw-semibold">
                                 {{ $article->created_at->format('F d, Y') }}</div>
-                            <p class="press-desc">
-                                {!! substr(html_entity_decode($article->description), 0, 150) !!}
-                                {!! strlen($article->description) > 150 ? '...' : '' !!}
-                            </p>
-                            <div onclick="shareToSocialMedia('{{ route('press-details', ['id' => $article->id]) }}')"
-                                class="share-icon"><i class="fa fa-share"></i>
-                            </div>
                            
+                                <div class="press-desc">
+                                    <p class="">
+                                        {!! substr(html_entity_decode($article->description), 0, 150) !!}
+                                        {!! strlen($article->description) > 150 ? '...' : '' !!}
+                                    </p>
+                                </div>
+                          
+                            <div class="d-flex justify-content-start pt-4">
+                                <div onclick="shareToSocialMedia('{{ route('press-details', ['id' => $article->id]) }}')"
+                                    class="share-icon"><i class="fa fa-share"></i>
+                                </div> 
+                            </div>
                           
                         </div>
                      
@@ -66,11 +71,13 @@
                                          <div style="font-size: 12px;" class="text-secondary mb-2 fw-semibold">PHOTOS</div>
 
                                          <h4 class="fw-semibold">{{ $article->title }}</h4>
-                                         <p class="press-author">{{ $article->author }}</p>
-                                         <p class="press-desc">
-                                             {!! substr(html_entity_decode($article->description), 0, 150) !!}
-                                             {!! strlen($article->description) > 150 ? '...' : '' !!}
-                                         </p>
+                                         <h5 class="press-author">{{ $article->author }}</h5>
+                                         <div class="press-desc">
+                                            <p>
+                                                {!! substr(html_entity_decode($article->description), 0, 150) !!}
+                                                {!! strlen($article->description) > 150 ? '...' : '' !!}
+                                            </p>
+                                        </div>
 
                                          <div class="share-icons">
                                              <a href="#"
@@ -107,11 +114,13 @@
                                      <div class="content-sec p-4">
                                          <div style="font-size: 12px;" class="text-secondary mb-2 fw-semibold">Update</div>
                                          <h4 class="fw-semibold">{{ $article->title }}</h4>
-                                         <p class="press-author">{{ $article->author }}</p>
-                                         <p class="press-desc">
-                                             {!! substr(html_entity_decode($article->description), 0, 150) !!}
-                                             {!! strlen($article->description) > 150 ? '...' : '' !!}
-                                         </p>
+                                         <h5 class="press-author">{{ $article->author }}</h5>
+                                         <div class="press-desc">
+                                            <p>
+                                                {!! substr(html_entity_decode($article->description), 0, 150) !!}
+                                                {!! strlen($article->description) > 150 ? '...' : '' !!}
+                                            </p>
+                                        </div>
                                          <div class="share-icons">
                                              <a href="#"
                                                  onclick="shareToSocialMedia('{{ route('press-details', ['id' => $article->id]) }}')"

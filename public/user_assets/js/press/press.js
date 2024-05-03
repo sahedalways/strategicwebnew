@@ -9,6 +9,7 @@ function triggerModal() {
 
 // Define the function to share to social media
 function shareToSocialMedia(url) {
+    event.preventDefault();
     currentURL = url;
     // Trigger the modal
     triggerModal();
@@ -18,6 +19,7 @@ function shareToSocialMedia(url) {
 var facebookButton = document.getElementById("facebook-btn");
 var linkedinButton = document.getElementById("linkedin-btn");
 var twitterButton = document.getElementById("twitter-btn");
+var pinterest = document.getElementById("pinterest-btn");
 
 // Add event listeners to each button
 facebookButton.addEventListener("click", function () {
@@ -36,6 +38,10 @@ linkedinButton.addEventListener("click", function () {
 
 twitterButton.addEventListener("click", function () {
     window.open("https://twitter.com/share?url=" + currentURL, "_blank");
+});
+
+pinterest.addEventListener("click", function () {
+    window.open("https://pinterest.com/share?url=" + currentURL, "_blank");
 });
 
 function copyLink() {

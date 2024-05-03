@@ -11,9 +11,9 @@
                       alt="Post Image">
 
                   <h1 class=" mb-4">{{ $article->title }}</h1>
-                  <p>{{ $article->author }}</p>
+                  <h5>{{ $article->author }}</h5>
                   <p class="text-muted">Posted on {{ $article->created_at->format('F d, Y') }}</p>
-                  <div class="post-content">
+                  <div class="post-content my-md-5 my-4">
                       <p>{!! html_entity_decode($article->description) !!}</p>
                   </div>
               </div>
