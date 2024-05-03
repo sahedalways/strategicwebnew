@@ -2,7 +2,7 @@
            <div class="row align-items-start">
                <div class="col-lg-7 col-12">
                    <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-bottom"
-                       class="custom-heading-2"> Embrace the future <br> begin with Strategic Web, where excellence is the standard.</h1>
+                       class="custom-heading-2"> Embrace the future - begin with Strategic Web, where excellence is the standard.</h1>
 
                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-bottom"
                        data-aos-duration="1000" class="custom-subtitle">

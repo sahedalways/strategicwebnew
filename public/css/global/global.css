@@ -909,3 +909,6 @@ button.owl-dot.active span {
     justify-content: center;
     align-items: center;
 }
+.custom-line-height{
+    line-height: inherit;
+}
