@@ -1,6 +1,6 @@
        <div class="hero-content container">
            <div class="row align-items-start">
-               <div class="col-md-7">
+               <div class="col-lg-7 col-12">
                    <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-bottom"
                        class="custom-heading-2"> Embrace the future <br> begin with Strategic Web, where excellence is the standard.</h1>
 
@@ -10,7 +10,7 @@
                    </div>
                </div>
 
-               <div class="col-md-5 text-end d-md-block d-none" data-aos="fade-up" data-aos-easing="linear"
+               <div class="col-md-5 text-end d-lg-block d-none" data-aos="fade-up" data-aos-easing="linear"
                    data-aos-anchor-placement="top-bottom">
                    <img class="col-lg-8 col-12" src="{{ asset('images/image.png') }}" alt="">
                </div>

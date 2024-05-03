@@ -164,7 +164,7 @@
 .home-hero-sec {
     position: relative;
     /* background-image: url('./img/home-banner.png'); */
-    height: 500px;
+    height: 600px;
     min-height: 100%;
     z-index: 111;
     /* background-size: cover;
@@ -238,7 +238,7 @@
 .hero-content {
     /* line-height: 30px; */
     /* height: 75vh; */
-    height: 500px;
+    height: 600px;
     display: flex;
     align-items: center;
 }
