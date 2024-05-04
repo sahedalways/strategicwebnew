@@ -4,7 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if (Route::currentRouteName() == 'press-details')
+        <!-- Meta tags for social sharing -->
+        <meta property="og:title" content="{{ $article->title }}">
+        <meta property="og:image" content="{{ asset('images/article/' . $article->id . '-1.' . $article->image) }}">
+    @endif
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
     <title>@yield('title')</title>
 
     <!-- Favicon -->
